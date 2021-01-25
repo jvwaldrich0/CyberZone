@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -132,3 +133,4 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = join(BASE_DIR, 'views/assets')
 MEDIA_ROOT = join(BASE_DIR.parent, 'data/media')
 CKEDITOR_UPLOAD_PATH = join(BASE_DIR.parent, 'data/uploads')
+

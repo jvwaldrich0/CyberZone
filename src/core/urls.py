@@ -25,9 +25,9 @@ def home(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blog/', blog_home),
-    path('', home)
-    
+    path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('blog/', blog_home.as_view(), name='home'),
+    path('', home),
 ] + static(settings.STATIC_URL, 
            document_root=settings.STATIC_ROOT
 ) + static(settings.MEDIA_URL,
