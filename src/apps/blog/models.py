@@ -4,7 +4,6 @@ from django.utils import timezone
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 
-# Create your models here.
 class post(models.Model):
     STATUS = (
         ('rascunho','Rascunho'),

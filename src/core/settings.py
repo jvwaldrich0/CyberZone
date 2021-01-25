@@ -130,7 +130,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = join(BASE_DIR, 'views/assets')
+STATIC_ROOT = join(BASE_DIR, 'views/')
 MEDIA_ROOT = join(BASE_DIR.parent, 'data/media')
 CKEDITOR_UPLOAD_PATH = join(BASE_DIR.parent, 'data/uploads')
 
