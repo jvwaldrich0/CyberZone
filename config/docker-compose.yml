@@ -7,6 +7,7 @@ services:
     volumes:
       - ../src:/code/src
       - ../data/media:/code/data/media
+      - ../data/uploads:/code/data/uploads
     ports:
       - 8000:8000
     depends_on:
@@ -17,4 +18,4 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     volumes:
-      - ../data/db:/var/lib/postgresql/data/:z
+      - ../data/db/postgres:/var/lib/postgresql/data/:z

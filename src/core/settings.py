@@ -60,7 +60,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [join(BASE_DIR, 'views'),
-                 join(BASE_DIR, 'views/templates')],
+                 join(BASE_DIR, 'views/templates'),
+                 join(BASE_DIR, 'views/pages')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,9 +81,13 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR.parent / 'data/db/database.sqlite3',
+    },
+    "backup": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
+        "NAME": "postgres",     
         "USER": "postgres",
         "PASSWORD": "postgres",
         "HOST": "db",
@@ -130,7 +135,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = join(BASE_DIR, 'views/')
 MEDIA_ROOT = join(BASE_DIR.parent, 'data/media')
 CKEDITOR_UPLOAD_PATH = join(BASE_DIR.parent, 'data/uploads')
 
+STATICFILES_DIRS = (
+    join(BASE_DIR, 'views/assets/css'),
+    join(BASE_DIR, 'views/assets/img'),
+    join(BASE_DIR, 'views/assets/fonts'),
+    join(BASE_DIR, 'views/assets/javascript')    
+)
