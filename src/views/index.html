@@ -1,78 +1,91 @@
-{% extends "base.html"%}
-{% block content %}
-	<header> <!-- Banner com animação -->
-		<div class="img-wrapper">
-			<img src="/static/background.png">
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cyber Zone</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png'%}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png'%}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png'%}">
+    <link rel="manifest" href="fotos/site.webmanifest">
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <header>
+        <nav>
+		    <input type="checkbox" id="check">
+		    <label for="check" class="checkbtn">
+			    <i class="fas fa-bars"></i>
+		    </label>
+		    <label class="logo"><img style="width:4cm; height: 2cm; background-color: #222222; position: absolute;" src="{% static 'logo1.png'%}"></label> <!-- Logo -->
+		        <ul style="background-color: #222222;">
+			    <input type="checkbox" id="check">
+		        <label for="check" class="checkbtn">
+			        <i class="fas fa-bars"></i>
+			    </label style="padding-bottom: 100px;">
+		        </br>
+			    <li><a class="active" href="index.html">Início</a></li>
+			    <li><a href="artigos.html">Artigos</a></li>
+			    <li><a href="perfil.html">Perfil</a></li>
+			    <li><a href="#">Fórum</a></li>
+			    <li><a href="Sobre.html">Sobre</a></li>
+		    </ul>
+        </nav>
+      </header>  
+<div>
+    <div id="slider" class="ban"> 
+           <img class="selected" src="{% static 'bn2.jpg'%}" alt="Image1">
+           <img src="{% static 'bn4.jpg'%}" alt="Image2">
+           <img src="{% static 'bn3.jpg'%}" alt="Image3">
+           <img src="{% static 'cabecalho.jpg'%}" alt="Image4">
+	</div>
+</div>
+	<section class="sessao-cursos">
+		<div class="section-header">
+			<h1>Cursos</h1>
 		</div>
-	</header>
-	
-	<table border="0" width="100%" cellpadding="10"> <!-- Criando as divisões -->
-	<tr>
-		<td width="70%" valign="top" background-color="#111">
-			<h2 style="text-align: center; padding-top: 2%;">Tutoriais</h2>
-			</br>
-			</br>
-			</br>
-			</br>
-			<div class="cursos"> <!-- Cursos -->
-			<a href="#"><img src="/static/python.png"></a>
-			<a href="#"><img src="/static/html.png"></a>
-			<a href="#"><img src="/static/python.png"></a>
-			<a href="#"><img src="/static/html.png"><p style="color: #222222;"></p></a>
+		<div class="cursos">
+			<div class="curso">
+				<div class="curso-header">
+					<i class="fab fa-python"></i>
+					<h3>Python</h3>
+				</div>
 			</div>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			<!-- Fórum -->
-			<h1 style="text-align: center;"><p style="font-size: 2.5rem;  background-color: #00a336;">Fórum</p></h1>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			</br>
-			<!-- Artigo qualquer sobre programação -->
-			<h2 style=" padding-left: 2%;">Programming</h2>
-			<h5 style="color: DimGray; padding-left: 2%;">What is programming?, &nbsp;Dec 8, &nbsp;2020</h5>  
-			</br>
-			</br>
-			<p>Generally, programming is the process of writing, testing, and maintaining computer programs. These programs, in turn, consist of sets of instructions defined by the programmer that describe the tasks that the machine must perform, and that serve various purposes.</p>
-			<p>The advent of programming is directly linked to the history of computers. The first programmer was a woman named Ada Lovelace, who wrote code to enable the use of Charles Babbage's analysis machine, a robust machine that was difficult to communicate, and is considered the forerunner of modern electronics. computers.</p>
-			<p>Programming and calculation: Image of Charles Babbage's analysis machine, a metal computer.
-			Differential machine, or analysis machine - created by Charles Babbage (1791 - 1871) A year later, computers became easier to use, and programming gained more and more space in the creation of these technologies. But to truly understand what it is all about, it is important to know two fundamental elements that make up all modern computers, namely hardware and software. </p>
-			</br>   
-			</br>       	
-		</td>
-		<!-- Artigos -->
-			<td width="30%" valign="top" style="background-color: #363636; border-radius: 10px;">
-				<h2 style="background: #363636; text-align: center;">Artigos</h2>
-				<!-- Favor terminar essa parte -->
-				<ul>
-					{% for post in blog.object_list %}
-						<li>
-							<img src=/media/{{post.background}}>
-							<br>
-							{{ post.title }}
-							<br>
-							{{ post.content | safe}}
-							<br>
-							{{ post.author}}
-							<br><hr>
-						</li>    
-					{% endfor %}
-				</ul>
-	</table>
-	<!-- Rodapé -->
-	<nav class="fim">
-		<input type="checkbox" id="check">
-		<ul class="fim" style="background-color: #222222;">
-			<li><a href="index.html">Início</a></li>
-			<li><a class="active" href="/blog">Artigos</a></li>
-			<li><a href="#">Tutoriais</a></li>
-			<li><a href="#">Fórum</a></li>
-			<li><a href="#">Sobre</a></li>
-		</ul>
-	</nav>
-{% endblock content %}
+			<div class="curso-text">
+				<p>Você vai criar programas usando a última versão do Python e vai se preparar para usá-lo na web com frameworks como Django ou ainda dar seus primeiros passos para chegar à Data Science e Machine Learning. Saiba como começar com Python.</p>
+			</div>
+		</div>
+		<div class="cursos">
+			<div class="curso">
+				<div class="curso-header">
+					<i class="fab fa-html5"></i>
+					<h3>HTML e CSS</h3>
+				</div>
+			</div>
+			<div class="curso-text">
+				<p>HTML e CSS da maneira certa e usando boas práticas da web, estruturando seu código para legibilidade e layouts verdadeiramente interessantes, com uso de bibliotecas e ferramentas. Sites responsivos, bootstrap, devtools, flexbox são assuntos importantes cobertos pelos cursos. Saiba como começar com HTML e CSS.</p>
+			</div>
+		</div>
+		<div class="cursos">
+			<div class="curso">
+				<div class="curso-header">
+					<i class="fab fa-js"></i>
+					<h3>JavaScript</h3>
+				</div>
+			</div>
+			<div class="curso-text">
+				<p>Aprenda tudo o que precisa para entrar ou se desenvolver na área que mais tem demanda por novos profissionais. Vá do zero ao profissional nas linguagens, frameworks, ferramentas e metodologias mais utilizadas no mercado atual.</p>
+			</div>
+		</div>
+	</section>
+	
+	<section class="sessao-artigos">
+		<div class="section-header">
+			<h1>Artigos</h1>
+		</div>
+	</section>
+		
+		<script src="script.js"></script>	
