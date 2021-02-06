@@ -1,142 +1,143 @@
-{% extends 'index.html' %}
-{% block title %} CyberZone {% endblock title %}
+{% extends 'index.html' %} {% block title %} CyberZone {% endblock title %} 
 {% block content %}
 <div>
-    <div id="slider" class="ban"> 
-           <img class="selected" src="../../static/bn2.jpg" alt="Image1">
-           <img src="../../static/bn4.jpg" alt="Image2">
-           <img src="../../static/bn3.jpg" alt="Image3">
-           <img src="../../static/cabecalho.jpg" alt="Image4">
-	</div>
+  <div id="slider" class="ban">
+    <img class="selected" src="../../static/bn2.jpg" alt="Image1" />
+    <img src="../../static/bn4.jpg" alt="Image2" />
+    <img src="../../static/bn3.jpg" alt="Image3" />
+    <img src="../../static/cabecalho.jpg" alt="Image4" />
+  </div>
 </div>
-	<section class="sessao-cursos">
-		<div class="section-header">
-			<h1>Cursos</h1>
-		</div>
-		<div class="cursos">
-			<div class="curso">
-				<div class="curso-header">
-					<i class="fab fa-python"></i>
-					<h3>Python</h3>
-				</div>
-			</div>
-			<div class="curso-text">
-				<p>Você vai criar programas usando a última versão do Python e vai se preparar para usá-lo na web com frameworks como Django ou ainda dar seus primeiros passos para chegar à Data Science e Machine Learning. Saiba como começar com Python.</p>
-			</div>
-		</div>
-		<div class="cursos">
-			<div class="curso">
-				<div class="curso-header">
-					<i class="fab fa-html5"></i>
-					<h3>HTML e CSS</h3>
-				</div>
-			</div>
-			<div class="curso-text">
-				<p>HTML e CSS da maneira certa e usando boas práticas da web, estruturando seu código para legibilidade e layouts verdadeiramente interessantes, com uso de bibliotecas e ferramentas. Sites responsivos, bootstrap, devtools, flexbox são assuntos importantes cobertos pelos cursos. Saiba como começar com HTML e CSS.</p>
-			</div>
-		</div>
-		<div class="cursos">
-			<div class="curso">
-				<div class="curso-header">
-					<i class="fab fa-js"></i>
-					<h3>JavaScript</h3>
-				</div>
-			</div>
-			<div class="curso-text">
-				<p>Aprenda tudo o que precisa para entrar ou se desenvolver na área que mais tem demanda por novos profissionais. Vá do zero ao profissional nas linguagens, frameworks, ferramentas e metodologias mais utilizadas no mercado atual.</p>
-			</div>
-		</div>
-	</section>
-	
-	<section class="sessao-artigos">
-		<div class="al-atigos">
-		    <div class="section-header2">
-			    <h1>Artigos</h1>
-			</div>
-			<div class="espaço-artigos">
-                <div class="area-artigos">
-                    <div class="cards">
-                        <div class="card card1">
-                            <div class="container">
-                                <img src="static/las vegas.jpg" alt="las vegas">
-                            </div>
-                            <div class="details">
-                                <h3>Las Vegas</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p>
-                            </div>
-                        </div>
-                        <div class="card card2">
-                            <div class="container">
-                                <img src="static/newyork.jpg" alt="New York">
-                            </div>
-                            <div class="details">
-                                <h3>New York</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p>
-                            </div>
-                        </div>
-                        <div class="card card3">
-                            <div class="container">
-                                <img src="static/singapore.jpg" alt="Singapore">
-                            </div>
-                            <div class="details">
-                                <h3>Singapore</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p>
-                            </div>
-                        </div>
-                    </div>
-				</div>
-			</div>
-	    </div>
-	</section>
-	<section class="sessao-forum">
-		<div class="al-forum">
-			<div class="forum-header">
-				<h1>Fórum</h1>
-			</div>
-			<div class="pergunta">
-				<div class="pergunta-header">
-					<img class="perfil-img" src="../../static/testebio.jpg">
-					<h3 class="pergunta-nome">Maria Vitória</h3>
-				</div>
-				<div class="pergunta-titulo">
-                    <h4>1050 ti e h110m csbr e uma boa combinação para jogos pesados?</h4>
-				</div>
-				<div class="pergunta-txt">
-					<h3>Mas uma duvida. com relação ao desempenho da placa gtx 1050 ti em placa mae asus h110m cs/br. queria saber se e boa para rodar games pesados?</h3>
-					<div class="banana">
-					    <input placeholder="Resposta" type="text" name="Pergunta" class="resposta-btn"/>
-						<input type="submit" value="Enviar" class="enviar"/>
-					</div>
-				</div>
-			</div>
-			<div class="resposta">
-				<div class="resposta-header">
-				    <img class="perfil-img" src="../../static/joao.jpg">  
-					<h3 class="pergunta-nome">João vitor</h3> 
-				</div>
-				<div class="resposta-titulo">
-                    <h4>A placa mãe não interfere diretamente no desempenho da placa de vídeo, você deve olhar para outros fatores, como processador ou se sua fonte é capaz de aguentar essa placa.</h4>
-				</div>
-			</div>
-			<div class="resposta">
-				<div class="resposta-header">
-				    <img class="perfil-img" src="../../static/joao.jpg">  
-					<h3 class="pergunta-nome">João vitor</h3> 
-				</div>
-				<div class="resposta-titulo">
-                    <h4>PS: A RX 570 está custando menos que a GTX 1050 TI e entrega desempenho próximo da GTX 1060 3Gb</h4>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="footer">
-			<a href="index.html">Início</a>
-			<a href="artigos.html">Artigos</a>
-			<a href="perfil.html">Perfil</a>
-			<a href="#">Fórum</a>
-			<a href="Sobre.html">Sobre</a>
-		</div>
-	</section>
-    <script src="../../static/script.js"></script>
+<section class="sessao-cursos">
+  <div class="section-header">
+    <h1>Cursos</h1>
+  </div>
+  <div class="cursos">
+    <div class="curso">
+      <div class="curso-header">
+        <i class="fab fa-python"></i>
+        <h3>Python</h3>
+      </div>
+    </div>
+    <div class="curso-text">
+      <p>
+        Você vai criar programas usando a última versão do Python e vai se
+        preparar para usá-lo na web com frameworks como Django ou ainda dar seus
+        primeiros passos para chegar à Data Science e Machine Learning. Saiba
+        como começar com Python.
+      </p>
+    </div>
+  </div>
+  <div class="cursos">
+    <div class="curso">
+      <div class="curso-header">
+        <i class="fab fa-html5"></i>
+        <h3>HTML e CSS</h3>
+      </div>
+    </div>
+    <div class="curso-text">
+      <p>
+        HTML e CSS da maneira certa e usando boas práticas da web, estruturando
+        seu código para legibilidade e layouts verdadeiramente interessantes,
+        com uso de bibliotecas e ferramentas. Sites responsivos, bootstrap,
+        devtools, flexbox são assuntos importantes cobertos pelos cursos. Saiba
+        como começar com HTML e CSS.
+      </p>
+    </div>
+  </div>
+  <div class="cursos">
+    <div class="curso">
+      <div class="curso-header">
+        <i class="fab fa-js"></i>
+        <h3>JavaScript</h3>
+      </div>
+    </div>
+    <div class="curso-text">
+      <p>
+        Aprenda tudo o que precisa para entrar ou se desenvolver na área que
+        mais tem demanda por novos profissionais. Vá do zero ao profissional nas
+        linguagens, frameworks, ferramentas e metodologias mais utilizadas no
+        mercado atual.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="sessao-artigos">
+  <div class="al-atigos">
+    <div class="section-header2">
+      <h1>Artigos</h1>
+    </div>
+    <div class="espaço-artigos">
+      <div class="area-artigos"></div>
+    </div>
+  </div>
+</section>
+<section class="sessao-forum">
+  <div class="al-forum">
+    <div class="forum-header">
+      <h1>Fórum</h1>
+    </div>
+    <div class="pergunta">
+      <div class="pergunta-header">
+        <img class="perfil-img" src="../../static/testebio.jpg" />
+        <h3 class="pergunta-nome">Maria Vitória</h3>
+      </div>
+      <div class="pergunta-titulo">
+        <h4>1050 ti e h110m csbr e uma boa combinação para jogos pesados?</h4>
+      </div>
+      <div class="pergunta-txt">
+        <h3>
+          Mas uma duvida. com relação ao desempenho da placa gtx 1050 ti em
+          placa mae asus h110m cs/br. queria saber se e boa para rodar games
+          pesados?
+        </h3>
+        <div class="banana">
+          <input
+            placeholder="Resposta"
+            type="text"
+            name="Pergunta"
+            class="resposta-btn"
+          />
+          <input type="submit" value="Enviar" class="enviar" />
+        </div>
+      </div>
+    </div>
+    <div class="resposta">
+      <div class="resposta-header">
+        <img class="perfil-img" src="../../static/joao.jpg" />
+        <h3 class="pergunta-nome">João vitor</h3>
+      </div>
+      <div class="resposta-titulo">
+        <h4>
+          A placa mãe não interfere diretamente no desempenho da placa de vídeo,
+          você deve olhar para outros fatores, como processador ou se sua fonte
+          é capaz de aguentar essa placa.
+        </h4>
+      </div>
+    </div>
+    <div class="resposta">
+      <div class="resposta-header">
+        <img class="perfil-img" src="../../static/joao.jpg" />
+        <h3 class="pergunta-nome">João vitor</h3>
+      </div>
+      <div class="resposta-titulo">
+        <h4>
+          PS: A RX 570 está custando menos que a GTX 1050 TI e entrega
+          desempenho próximo da GTX 1060 3Gb
+        </h4>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="footer">
+    <a href="index.html">Início</a>
+    <a href="artigos.html">Artigos</a>
+    <a href="perfil.html">Perfil</a>
+    <a href="#">Fórum</a>
+    <a href="Sobre.html">Sobre</a>
+  </div>
+</section>
+<script src="../../static/script.js"></script>
 {% endblock content %}

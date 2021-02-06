@@ -21,6 +21,7 @@ img{
 .container:after{
     content: "";
     height: 100%;
-    width: 100%;s    line-height: 30px;
+    width: 100%;
+    line-height: 30px;
     font-weight: 400;
 }
