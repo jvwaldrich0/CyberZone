@@ -21,6 +21,7 @@ class post(models.Model):
     status = models.CharField(max_length=15,
                               choices=STATUS,
                               default='rascunho')
+    
     class Meta():
         ordering = ('-published_at',)
     

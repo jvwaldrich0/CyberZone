@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 from os.path import join
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -59,10 +60,10 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [join(BASE_DIR, 'views'),
-                 join(BASE_DIR, 'views/templates'),
-                 join(BASE_DIR, 'views/pages'),
-                 join(BASE_DIR, 'views/templates/registration')],
+        'DIRS': [join(BASE_DIR.parent, 'public'),
+                 join(BASE_DIR.parent, 'public/templates'),
+                 join(BASE_DIR.parent, 'public/templates/pages'),
+                 join(BASE_DIR.parent, 'public/templates/auth')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,7 +85,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR.parent / 'data/db/sqlite3/database.sqlite3',
+        'NAME': BASE_DIR.parent / 'data/sqlite3/database.sqlite3',
     },
     "backup": {
         "ENGINE": "django.db.backends.postgresql",
@@ -119,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
 
@@ -136,13 +137,20 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 LOGIN_REDIRECT_URL = 'home'
-
+LOGOUT_REDIRECT_URL = 'home'
 MEDIA_ROOT = join(BASE_DIR.parent, 'data/media')
 CKEDITOR_UPLOAD_PATH = join(BASE_DIR.parent, 'data/uploads')
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_POST = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'meutccentra21@gmail.com'
+EMAIL_HOST_PASSWORD = 'MeuTCCEntra21'
+
 STATICFILES_DIRS = (
-    join(BASE_DIR, 'views/assets/css'),
-    join(BASE_DIR, 'views/assets/img'),
-    join(BASE_DIR, 'views/assets/fonts'),
-    join(BASE_DIR, 'views/assets/javascript')    
+    join(BASE_DIR.parent, 'public/static/css'),
+    join(BASE_DIR.parent, 'public/static/img'),
+    join(BASE_DIR.parent, 'public/static/fonts'),
+    join(BASE_DIR.parent, 'public/static/javascript')    
 )
