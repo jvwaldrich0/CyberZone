@@ -350,10 +350,10 @@ a.active, a:hover {
 
 .espaço-artigos {
 	background-color: #00a336;
-	padding: 2%;
+	padding: 4%;
 	padding-bottom: 4%;
 	position: flex;
-	min-height: 100%;
+	min-height: 120%;
 }
 
 .area-artigos {
