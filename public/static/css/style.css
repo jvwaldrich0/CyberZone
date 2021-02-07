@@ -255,6 +255,7 @@ a.active, a:hover {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	margin-top: 1rem;
 	padding-bottom: 2rem;
+	color: gray
 }
 
 .sessao-cursos {
@@ -326,6 +327,8 @@ a.active, a:hover {
 .sessao-artigos {
 	padding-top: 5%;
 	padding-bottom: 4%;
+	background-color: #00a336;
+
 }
 
 .section-header2 h1 {
