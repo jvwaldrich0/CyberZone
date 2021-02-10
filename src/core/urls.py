@@ -10,7 +10,7 @@ from django.contrib import admin
 from core import settings
 from core.auth.auth import register_request, logout_request, recovery_pwd, recovery_pwd_done
 # blog
-from apps.blog.views import blog_home, add_post
+from apps.blog.views import blog_home, add_post, detail_blog
 from apps.blog.models import post
 # forum
 from apps.forum.views import forum_home
@@ -41,8 +41,9 @@ urlpatterns = [
     path("account/password-reset-complete/", auth_views.PasswordResetCompleteView.as_view(template_name='password_reset_complete.html'), name="password_reset_complete"),
     path('account/logout/',logout_request, name='logout'),
     path('admin/', admin.site.urls),
-    path('blog/novo-artigo/', add_post.as_view(), name='novo_artigo'),
     path('blog/', blog_home.as_view(), name='blog'),
+    path('blog/novo-artigo/', add_post.as_view(), name='novo_artigo'),
+    path('blog/article/<slug:slug>', detail_blog.as_view(), name='detail_blog'),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('forum/', forum_home.as_view(), name='forum'),
     path('user/<int:pk>' , user_home.as_view(), name='user_home'),
