@@ -1,228 +1,386 @@
-{% extends 'index.html' %} {% block title %} {{user.username | title}} {%
-endblock title %} {% block content%}
+{% extends 'index.html' %} {% block title %} {{user.username | title}} {% endblock title %} 
+{% block content%}
+
+{% if user.is_authenticated %}
+
 <div class="pagina">
   <div class="user-header">
     <div class="user-perfil">
       <div class="user-header-header">
         <div class="user-background">
-          <img src="../../static/wallpapper.png" alt="" />
+          <img src="../../../media/{{extendsuser.profile_background}}" alt="" />
         </div>
         <div class="user-img">
-          <img src="../../static/testebio.jpg" alt="" />
+          <img src="../../../media/{{extendsuser.profile_picture}}"alt="" />
         </div>
         <div class="name-user">
-          <h2>Nome De Usuario</h2>
+          <h2>{{extendsuser.nickname}}</h2>
         </div>
       </div>
       <div class="user-bio">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et massa
-        non sapien sollicitudin dictum eu eu nulla. Donec ipsum erat, luctus id
-        consectetur nec, interdum ut velit. Suspendisse consectetur maximus
-        eleifend. Fusce ac semper nunc. Morbi eget turpis odio. Nunc a pretium
-        erat. Vestibulum vitae dui posuere diam tincidunt placerat.
+        {{extendsuser.bio}}
       </div>
+          <a href="{% url 'novo_artigo' %}" type="button" class="btn btn-light">Adicionar Artigo</a>
     </div>
   </div>
   <div class="user-atividade">
     <div class="user-artigos">
-      <div class="user-artigos-header"><h2>Artigos</h2></div>
+      <div class="user-artigos-header" style="color: #fff;"><h2>Artigos</h2></div>
       <div class="user-artigos-content">
+        
         <div class="user-artigos-container">
-          <div class="card" style="width: 18rem; height: 27rem">
+          <div
+          class="card"
+          style="
+            width: 23rem;
+            background-color: #1c1b29;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+            transition-duration: 0.5s;
+          "
+        >
             <img
-              style="width: 18rem"
               class="card-img-top"
-              src="../../static/tes3.jpeg"
+              src="../../../static/img1.jpg"
               alt="Card image cap"
             />
             <div class="card-body">
-              <h4 class="card-title">
-                4 linguagens em crescimento no mercado de Data Science
-              </h4>
-              <p class="card-text">
-                Com outros assuntos ligados à tecnologia, Data Science ganhou
-                muita popularidade nos últimos anos.
+              <h4 style="color: #fff" class="card-title">Card title</h4>
+              <p style="color: grey" class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.jk,ashdj,masbhdkjash
+                jkdhaskjdhaskuhdkuashdkuash ukdhaskhdaskujhdakushdkuas\
+                asjdailsjdilasjdilasjdilasjdilasjildjasikl dkah sdkuhask
+                sakildjaslikjdailjsdiloasj
               </p>
-            </div>
-            <div class="botao">
-              <a href="#"><button>Mais</button></a>
+              <a type="button" class="btn btn-success">Ler Artigo</a>
             </div>
           </div>
-        </div>
-        <div class="user-artigos-container">
-          <div class="card" style="width: 18rem; height: 27rem">
+        </div><div class="user-artigos-container">
+          <div
+          class="card"
+          style="
+            width: 23rem;
+            background-color: #1c1b29;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+            transition-duration: 0.5s;
+          "
+        >
             <img
-              style="width: 18rem"
               class="card-img-top"
-              src="../../static/tes3.jpeg"
+              src="../../../static/tes1.jpg"
               alt="Card image cap"
             />
             <div class="card-body">
-              <h4 class="card-title">
-                4 linguagens em crescimento no mercado de Data Science
-              </h4>
-              <p class="card-text">
-                Com outros assuntos ligados à tecnologia, Data Science ganhou
-                muita popularidade nos últimos anos.
+              <h4 style="color: #fff" class="card-title">Card title</h4>
+              <p style="color: grey" class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.jk,ashdj,masbhdkjash
+                jkdhaskjdhaskuhdkuashdkuash ukdhaskhdaskujhdakushdkuas\
+                asjdailsjdilasjdilasjdilasjdilasjildjasikl dkah sdkuhask
+                sakildjaslikjdailjsdiloasj
               </p>
-            </div>
-            <div class="botao">
-              <a href="#"><button>Mais</button></a>
+              <a type="button" class="btn btn-success">Ler Artigo</a>
             </div>
           </div>
-        </div>
-        <div class="user-artigos-container">
-          <div class="card" style="width: 18rem; height: 27rem">
+        </div><div class="user-artigos-container">
+          <div
+          class="card"
+          style="
+            width: 23rem;
+            background-color: #1c1b29;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+            transition-duration: 0.5s;
+          "
+        >
             <img
-              style="width: 18rem"
               class="card-img-top"
-              src="../../static/tes3.jpeg"
+              src="../../../static/tes2.jpg"
               alt="Card image cap"
             />
             <div class="card-body">
-              <h4 class="card-title">
-                4 linguagens em crescimento no mercado de Data Science
-              </h4>
-              <p class="card-text">
-                Com outros assuntos ligados à tecnologia, Data Science ganhou
-                muita popularidade nos últimos anos.
+              <h4 style="color: #fff" class="card-title">Card title</h4>
+              <p style="color: grey" class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.jk,ashdj,masbhdkjash
+                jkdhaskjdhaskuhdkuashdkuash ukdhaskhdaskujhdakushdkuas\
+                asjdailsjdilasjdilasjdilasjdilasjildjasikl dkah sdkuhask
+                sakildjaslikjdailjsdiloasj
               </p>
-            </div>
-            <div class="botao">
-              <a href="#"><button>Mais</button></a>
+              <a type="button" class="btn btn-success">Ler Artigo</a>
             </div>
           </div>
-        </div>
-        <div class="user-artigos-container">
-          <div class="card" style="width: 18rem; height: 27rem">
+        </div><div class="user-artigos-container">
+          <div
+          class="card"
+          style="
+            width: 23rem;
+            background-color: #1c1b29;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+            transition-duration: 0.5s;
+          "
+        >
             <img
-              style="width: 18rem"
               class="card-img-top"
-              src="../../static/tes3.jpeg"
+              src="../../../static/tes3.jpeg"
               alt="Card image cap"
             />
             <div class="card-body">
-              <h4 class="card-title">
-                4 linguagens em crescimento no mercado de Data Science
-              </h4>
-              <p class="card-text">
-                Com outros assuntos ligados à tecnologia, Data Science ganhou
-                muita popularidade nos últimos anos.
+              <h4 style="color: #fff" class="card-title">Card title</h4>
+              <p style="color: grey" class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.jk,ashdj,masbhdkjash
+                jkdhaskjdhaskuhdkuashdkuash ukdhaskhdaskujhdakushdkuas\
+                asjdailsjdilasjdilasjdilasjdilasjildjasikl dkah sdkuhask
+                sakildjaslikjdailjsdiloasj
               </p>
-            </div>
-            <div class="botao">
-              <a href="#"><button>Mais</button></a>
+              <a type="button" class="btn btn-success">Ler Artigo</a>
             </div>
           </div>
-        </div>
-        <div class="user-artigos-container">
-          <div class="card" style="width: 18rem; height: 27rem">
+        </div><div class="user-artigos-container">
+          <div
+          class="card"
+          style="
+            width: 23rem;
+            background-color: #1c1b29;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+            transition-duration: 0.5s;
+          "
+        >
             <img
-              style="width: 18rem"
               class="card-img-top"
-              src="../../static/tes3.jpeg"
+              src="../../../static/img1.jpg"
               alt="Card image cap"
             />
             <div class="card-body">
-              <h4 class="card-title">
-                4 linguagens em crescimento no mercado de Data Science
-              </h4>
-              <p class="card-text">
-                Com outros assuntos ligados à tecnologia, Data Science ganhou
-                muita popularidade nos últimos anos.
+              <h4 style="color: #fff" class="card-title">Card title</h4>
+              <p style="color: grey" class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.jk,ashdj,masbhdkjash
+                jkdhaskjdhaskuhdkuashdkuash ukdhaskhdaskujhdakushdkuas\
+                asjdailsjdilasjdilasjdilasjdilasjildjasikl dkah sdkuhask
+                sakildjaslikjdailjsdiloasj
               </p>
-            </div>
-            <div class="botao">
-              <a href="#"><button>Mais</button></a>
+              <a type="button" class="btn btn-success">Ler Artigo</a>
             </div>
           </div>
-        </div>
-        <div class="user-artigos-container">
-          <div class="card" style="width: 18rem; height: 27rem">
+        </div><div class="user-artigos-container">
+          <div
+          class="card"
+          style="
+            width: 23rem;
+            background-color: #1c1b29;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+            transition-duration: 0.5s;
+          "
+        >
             <img
-              style="width: 18rem"
               class="card-img-top"
-              src="../../static/tes3.jpeg"
+              src="../../../static/img1.jpg"
               alt="Card image cap"
             />
-            <div class="card">
-              <div class="card-image"></div>
-              <div class="card-text">
-                <span class="date">4 days ago</span>
-                <h2>Post One</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae
-                  temporibus omnis illum maxime quod deserunt eligendi dolor
-                </p>
-              </div>
-              <div class="card-stats">
-                <div class="stat">
-                  <div class="value">4<sup>m</sup></div>
-                  <div class="type">read</div>
-                </div>
-                <div class="stat border">
-                  <div class="value">5123</div>
-                  <div class="type">views</div>
-                </div>
-                <div class="stat">
-                  <div class="value">32</div>
-                  <div class="type">comments</div>
-                </div>
-              </div>
+            <div class="card-body">
+              <h4 style="color: #fff" class="card-title">Card title</h4>
+              <p style="color: grey" class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.jk,ashdj,masbhdkjash
+                jkdhaskjdhaskuhdkuashdkuash ukdhaskhdaskujhdakushdkuas\
+                asjdailsjdilasjdilasjdilasjdilasjildjasikl dkah sdkuhask
+                sakildjaslikjdailjsdiloasj
+              </p>
+              <a type="button" class="btn btn-success">Ler Artigo</a>
             </div>
-            <div class="card">
-              <div class="card-image card2"></div>
-              <div class="card-text card2">
-                <span class="date">1 week ago</span>
-                <h2>Post Two</h2>
-                <p>
-                  Adipisicing elit. Ducimus, repudiandae corrupti amet
-                  temporibus omnis provident illum maxime quod. Lorem ipsum
-                  dolor
-                </p>
-              </div>
-              <div class="card-stats card2">
-                <div class="stat">
-                  <div class="value">7<sup>m</sup></div>
-                  <div class="type">read</div>
-                </div>
-                <div class="stat border">
-                  <div class="value">7152</div>
-                  <div class="type">views</div>
-                </div>
-                <div class="stat">
-                  <div class="value">21</div>
-                  <div class="type">comments</div>
-                </div>
-              </div>
+          </div>
+        </div><div class="user-artigos-container">
+          <div
+          class="card"
+          style="
+            width: 23rem;
+            background-color: #1c1b29;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+            transition-duration: 0.5s;
+          "
+        >
+            <img
+              class="card-img-top"
+              src="../../../static/img1.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h4 style="color: #fff" class="card-title">Card title</h4>
+              <p style="color: grey" class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.jk,ashdj,masbhdkjash
+                jkdhaskjdhaskuhdkuashdkuash ukdhaskhdaskujhdakushdkuas\
+                asjdailsjdilasjdilasjdilasjdilasjildjasikl dkah sdkuhask
+                sakildjaslikjdailjsdiloasj
+              </p>
+              <a type="button" class="btn btn-success">Ler Artigo</a>
             </div>
-            <div class="card">
-              <div class="card-image card3"></div>
-              <div class="card-text card3">
-                <span class="date">3 week ago</span>
-                <h2>Post Three</h2>
-                <p>
-                  Repudiandae corrupti amet temporibus omnis provident illum
-                  maxime. Ducimus, lorem ipsum dolor adipisicing elit
-                </p>
-              </div>
-              <div class="card-stats card3">
-                <div class="stat">
-                  <div class="value">5<sup>m</sup></div>
-                  <div class="type">read</div>
-                </div>
-                <div class="stat border">
-                  <div class="value">3021</div>
-                  <div class="type">views</div>
-                </div>
-                <div class="stat">
-                  <div class="value">15</div>
-                  <div class="type">comments</div>
-                </div>
-              </div>
+          </div>
+        </div><div class="user-artigos-container">
+          <div
+          class="card"
+          style="
+            width: 23rem;
+            background-color: #1c1b29;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+            transition-duration: 0.5s;
+          "
+        >
+            <img
+              class="card-img-top"
+              src="../../../static/img1.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h4 style="color: #fff" class="card-title">Card title</h4>
+              <p style="color: grey" class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.jk,ashdj,masbhdkjash
+                jkdhaskjdhaskuhdkuashdkuash ukdhaskhdaskujhdakushdkuas\
+                asjdailsjdilasjdilasjdilasjdilasjildjasikl dkah sdkuhask
+                sakildjaslikjdailjsdiloasj
+              </p>
+              <a type="button" class="btn btn-success">Ler Artigo</a>
+            </div>
+          </div>
+        </div><div class="user-artigos-container">
+          <div
+          class="card"
+          style="
+            width: 23rem;
+            background-color: #1c1b29;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+            transition-duration: 0.5s;
+          "
+        >
+            <img
+              class="card-img-top"
+              src="../../../static/img1.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h4 style="color: #fff" class="card-title">Card title</h4>
+              <p style="color: grey" class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.jk,ashdj,masbhdkjash
+                jkdhaskjdhaskuhdkuashdkuash ukdhaskhdaskujhdakushdkuas\
+                asjdailsjdilasjdilasjdilasjdilasjildjasikl dkah sdkuhask
+                sakildjaslikjdailjsdiloasj
+              </p>
+              <a type="button" class="btn btn-success">Ler Artigo</a>
+            </div>
+          </div>
+        </div><div class="user-artigos-container">
+          <div
+          class="card"
+          style="
+            width: 23rem;
+            background-color: #1c1b29;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+            transition-duration: 0.5s;
+          "
+        >
+            <img
+              class="card-img-top"
+              src="../../../static/img1.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h4 style="color: #fff" class="card-title">Card title</h4>
+              <p style="color: grey" class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.jk,ashdj,masbhdkjash
+                jkdhaskjdhaskuhdkuashdkuash ukdhaskhdaskujhdakushdkuas\
+                asjdailsjdilasjdilasjdilasjdilasjildjasikl dkah sdkuhask
+                sakildjaslikjdailjsdiloasj
+              </p>
+              <a type="button" class="btn btn-success">Ler Artigo</a>
+            </div>
+          </div>
+        </div><div class="user-artigos-container">
+          <div
+          class="card"
+          style="
+            width: 23rem;
+            background-color: #1c1b29;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+            transition-duration: 0.5s;
+          "
+        >
+            <img
+              class="card-img-top"
+              src="../../../static/img1.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h4 style="color: #fff" class="card-title">Card title</h4>
+              <p style="color: grey" class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.jk,ashdj,masbhdkjash
+                jkdhaskjdhaskuhdkuashdkuash ukdhaskhdaskujhdakushdkuas\
+                asjdailsjdilasjdilasjdilasjdilasjildjasikl dkah sdkuhask
+                sakildjaslikjdailjsdiloasj
+              </p>
+              <a type="button" class="btn btn-success">Ler Artigo</a>
+            </div>
+          </div>
+        </div><div class="user-artigos-container">
+          <div
+          class="card"
+          style="
+            width: 23rem;
+            background-color: #1c1b29;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+            transition-duration: 0.5s;
+          "
+        >
+            <img
+              class="card-img-top"
+              src="../../../static/img1.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h4 style="color: #fff" class="card-title">Esse</h4>
+              <p style="color: grey" class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.jk,ashdj,masbhdkjash
+                jkdhaskjdhaskuhdkuashdkuash ukdhaskhdaskujhdakushdkuas\
+                asjdailsjdilasjdilasjdilasjdilasjildjasikl dkah sdkuhask
+                sakildjaslikjdailjsdiloasj
+              </p>
+              <a type="button" class="btn btn-success">Ler Artigo</a>
+            </div>
+          </div>
+        </div><div class="user-artigos-container">
+          <div
+          class="card"
+          style="
+            width: 23rem;
+            background-color: #1c1b29;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+            transition-duration: 0.5s;
+          "
+        >
+            <img
+              class="card-img-top"
+              src="../../../static/img1.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h4 style="color: #fff" class="card-title">Card title</h4>
+              <p style="color: grey" class="card-text">
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.jk,ashdj,masbhdkjash
+                jkdhaskjdhaskuhdkuashdkuash ukdhaskhdaskujhdakushdkuas\
+                asjdailsjdilasjdilasjdilasjdilasjildjasikl dkah sdkuhask
+                sakildjaslikjdailjsdiloasj
+              </p>
+              <a type="button" class="btn btn-success">Ler Artigo</a>
             </div>
           </div>
         </div>
+        <div class="user-artigos-container"></div>
         <div class="user-artigos-container"></div>
         <div class="user-artigos-container"></div>
       </div>
@@ -322,8 +480,24 @@ endblock title %} {% block content%}
             </div>
           </div>
         </div>
+                </div>
+</div>
+{% else %}
+<div class="logout_container">
+      <div class="cont">
+        <div class="containe">
+          <div class="banana">
+            <h1 class="font-weight-bold mt-3">
+              Você já esta logado como {{ user.username}}
+            </h1>
+            <form class="sign-in-form" action="{% url 'logout' %}">
+              <p></p>
+              <button class="btn btn-primary" type="submit">Log out</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+{% endif %}
+
 {% endblock content%}

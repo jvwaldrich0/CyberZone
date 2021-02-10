@@ -39,7 +39,7 @@ def register_request(request):
 		messages.error(request, "Registro Inválido")
 	# Form
 	sign_up_form = sign_up()
-	sign_in_form = AuthenticationForm()
+	sign_in_form = AuthenticationForm()	
 	# Return
 	return render(  
                request=request,

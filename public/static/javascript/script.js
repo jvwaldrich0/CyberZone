@@ -37,3 +37,5 @@ function readImage() {
     }
 }
 document.getElementById("img-input").addEventListener("change", readImage, false);
+
+

@@ -9,6 +9,13 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap.css' %}"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -35,7 +42,7 @@
     />
     <link rel="manifest" href="../../static/site.webmanifest" />
   </head>
-  <body>
+  <body class="fadeIn">
     <!-- Barra de navegação -->
     <header>
       <nav>
@@ -65,7 +72,7 @@
           <li class="perfil-img-nave">
             <img class="perfil-img-nav" src="../../static/joao.jpg" />
           </li>
-          <li><a href="{% url 'user_home'%}">{{user.username}}</a></li>
+          <li><a href="{% url 'user_home' user.id %}">{{user.username}}</a></li>
           <li><a href="{% url 'logout'%}">logout</a></li>
           {% else %}
           <li><a href="{% url 'account'%}">Login</a></li>
