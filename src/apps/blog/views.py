@@ -6,6 +6,12 @@ class blog_home(ListView):
     model = post
     template_name = 'article.html'
 
+    
+
+class detail_blog(DetailView):
+    model = post
+    template_name = 'post.html'
+
 class add_post(CreateView):
     model = post
     template_name = 'novo_artigo.html'
