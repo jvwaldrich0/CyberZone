@@ -1,0 +1,139 @@
+{% extends 'index.html' %} {% block title %} {{user.username | title}} {% endblock title %} 
+{% block content%}
+
+{% if user.is_authenticated %}
+
+<div class="pagina">
+  <div class="user-header">
+    <div class="user-perfil">
+      <div class="user-header-header">
+        <div class="user-background">
+          <img src="../../../media/{{extendsuser.profile_background}}" alt="" /> 
+        </div>
+        <div class="user-img">
+          <img src="../../../../media/{{extendsuser.profile_picture}}"alt="" />
+        </div>
+        <div class="name-user">
+          <h2>{{extendsuser.nickname}}</h2>
+        </div>
+      </div>
+      <div class="user-bio">
+        {{extendsuser.bio}}
+      </div>
+          <a href="{% url 'novo_artigo' %}" type="button" class="btn btn-light">Adicionar Artigo</a>
+    </div>
+  </div>
+  <div class="user-atividade">
+    <div class="user-artigos">
+      <div class="user-artigos-header" style="color: #fff;"><h2>Artigos</h2></div>
+      <div class="user-artigos-content">
+      </div>
+    </div>
+
+    <div class="user-perguntas">
+      <div class="user-perguntas-header"><h2>Perguntas</h2></div>
+      <div class="user-perguntas-content">
+        <div class="user-perguntas-container">
+          <div class="pergunta">
+            <div class="pergunta-header">
+              <img class="perfil-img" src="../../static/testebio.jpg" />
+              <h3 class="pergunta-nome">Maria Vitória</h3>
+            </div>
+            <div class="pergunta-titulo">
+              <h4>
+                1050 ti e h110m csbr e uma boa combinação para jogos pesados?
+              </h4>
+            </div>
+            <div class="pergunta-txt">
+              <h3>
+                Mas uma duvida. com relação ao desempenho da placa gtx 1050 ti
+                em placa mae asus h110m cs/br. queria saber se e boa para rodar
+                games pesados?
+              </h3>
+              <div class="banana">
+                <input
+                  placeholder="Resposta"
+                  type="text"
+                  name="Pergunta"
+                  class="resposta-btn"
+                />
+                <input type="submit" value="Enviar" class="enviar" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="user-perguntas-container">
+          <div class="pergunta">
+            <div class="pergunta-header">
+              <img class="perfil-img" src="../../static/testebio.jpg" />
+              <h3 class="pergunta-nome">Maria Vitória</h3>
+            </div>
+            <div class="pergunta-titulo">
+              <h4>Controle de Chamados</h4>
+            </div>
+            <div class="pergunta-txt">
+              <h3>
+                Boa tarde a todos, gostaria que alguém me indicasse um sistema
+                bem simples paa somente controlar os problemas que os usuários
+                da empresa relatassem através de chamados, como um HelpDesk,
+                como eu sou o responsável pelo setor de TI, hoje eu uso uma
+                planilha, mais seria viável se todos pudessem abrir os próprios
+                chamados. Desde já, agradeço a todos !
+              </h3>
+              <div class="banana">
+                <input
+                  placeholder="Resposta"
+                  type="text"
+                  name="Pergunta"
+                  class="resposta-btn"
+                />
+                <input type="submit" value="Enviar" class="enviar" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="user-perguntas-container">
+          <div class="pergunta">
+            <div class="pergunta-header">
+              <img class="perfil-img" src="../../static/testebio.jpg" />
+              <h3 class="pergunta-nome">Maria Vitória</h3>
+            </div>
+            <div class="pergunta-titulo">
+              <h4>
+                Uma placa mãe 3029h funciona numa placa de vídeo GTX 550ti?
+              </h4>
+            </div>
+            <div class="pergunta-txt">
+              <h3>
+                eu tenho uma placa mãe que se chama 3029h e eu quero comprar uma
+                placa de video chamada GTX 550 ti e eu quero perguntar uma
+                coisa, essa placa mãe funciona na placa de video que desejo
+                comprar?
+              </h3>
+              <div class="space">
+                <div class="banana">
+                  <input
+                    placeholder="Resposta"
+                    type="text"
+                    name="Pergunta"
+                    class="resposta-btn"
+                  />
+                  <input type="submit" value="Enviar" class="enviar" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                </div>
+</div>
+{% else %}
+<div class="logout_container">
+      <div class="cont">
+        <div class="containe">
+          
+        </div>
+      </div>
+    </div>
+{% endif %}
+
+{% endblock content%}
