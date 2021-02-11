@@ -8,30 +8,57 @@
     <div class="user-perfil">
       <div class="user-header-header">
         <div class="user-background">
-          <img src="../../../media/{{extendsuser.profile_background}}" alt="" /> 
+          <img src="../../../media/{{extendsuser.profile_background}}" alt="user_background"/> 
         </div>
         <div class="user-img">
-          <img src="../../../../media/{{extendsuser.profile_picture}}"alt="" />
+          <img src="../../../../media/{{extendsuser.profile_picture}}"alt="user_img_profile"/>
         </div>
-        <div class="name-user">
+        <div class="user-name">
           <h2>{{extendsuser.nickname}}</h2>
         </div>
       </div>
       <div class="user-bio">
         {{extendsuser.bio}}
       </div>
-          <a href="{% url 'novo_artigo' %}" type="button" class="btn btn-light">Adicionar Artigo</a>
     </div>
   </div>
   <div class="user-atividade">
     <div class="user-artigos">
-      <div class="user-artigos-header" style="color: #fff;"><h2>Artigos</h2></div>
+			<div class="user-artigos-header" style="color: #fff;">
+				<div class="user-novo-artigo-btn-container"></div>
+				<div class="user-header-h2-container">
+        	<h2>Artigos</h2>
+				</div>
+				<div class="user-novo-artigo-btn-container">
+					<div class="user-novo-artigo-btn">
+						<a href="{% url 'novo_artigo' %}" type="button">
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16" style="background-color:  #00a336;">
+								<path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+							</svg>
+						</a>
+          </div>
+				</div>
+      </div>
       <div class="user-artigos-content">
       </div>
     </div>
 
     <div class="user-perguntas">
-      <div class="user-perguntas-header"><h2>Perguntas</h2></div>
+      <div class="user-perguntas-header">
+				<div class="user-novo-artigo-btn-container"></div>
+				<div class="user-header-h2-container">
+        	<h2>Artigos</h2>
+				</div>
+				<div class="user-novo-artigo-btn-container">
+					<div class="user-novo-artigo-btn">
+						<a href="{% url 'novo_artigo' %}" type="button">
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16" style="background-color:  #00a336;">
+								<path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+							</svg>
+						</a>
+          </div>
+				</div>
+			</div>
       <div class="user-perguntas-content">
         <div class="user-perguntas-container">
           <div class="pergunta">

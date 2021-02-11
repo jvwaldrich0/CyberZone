@@ -560,6 +560,10 @@ a.active, a:hover {
 	padding-bottom: 2%;
 }
 
+.pergunta-txt h3 {
+	color: white;
+}
+
 .banana{
 	display: flex;
 	justify-content: right;
@@ -1202,20 +1206,26 @@ a.active, a:hover {
 	align-items: center;
 	height: 400px;
 	width: auto;
-	padding-right: 3%;
-	padding-left: 3%;
+	margin-left: 3%;
+	margin-right: 3%;
 	margin-top: 1.5%;
 	overflow: hidden;
+	border-bottom: 3px solid #00501b;
 }
 
 .user-background img {
 	width: 100%;
+	object-fit: cover;
 }
 
-.name-user {
+.user-name {
 	height: auto;
 	width: 50%;
 	text-align: center;
+}
+
+.user-name h2 {
+	color: white;
 }
 
 .user-bio {
@@ -1248,21 +1258,55 @@ a.active, a:hover {
 .user-artigos-header {
 	height: auto;
 	width: 100%;
+	display: flex;
 	justify-content: center;
-	text-align: center;
+	align-items: center;
+	background-color: #00a336
 }
 
+.user-header-h2-container {
+	height: 100%;
+	width: 30%;
+	margin-bottom: 0%;
+	justify-content: center;
+	text-align: center;
+	background-color: #00a336;
+}
 
-.user-artigos-header h2 {
+.user-header-h2-container h2 {
 	padding-top: 1%;
-	padding-bottom: 1%;
-	border-bottom: 3px solid #00501b;
-	width: 40%;
-	margin-left: 30%;
+	background-color: #00a336;
+	margin-bottom: 0%;
+	color: white;
+}
+
+.user-novo-artigo-btn-container {
+	background-color: #00a336;
+	width: 35%;
+	height: 100%;
+	justify-content: center;
+}
+
+.user-novo-artigo-btn {
+	background-color: #00a336;
+	display: flex;
+	text-align: end;
+	align-items: flex-end;
+	justify-content: flex-end;
+	height: 35px;
+	width: 98.5%;
+}
+
+.user-novo-artigo-btn a {
+	text-decoration: none;
+	color: white;
+	height: 35px;
+	width: 35px;
 }
 
 .user-artigos-content {
-	height: auto;
+	height: 100%;
+	min-height: 7.5rem;
 	width: 100%;
 	padding: 1.75%;
 	display: flex;
@@ -1288,14 +1332,19 @@ a.active, a:hover {
 .user-perguntas-header {
 	height: auto;
 	width: 100%;
-	text-align: center;
-	background-color: #00a336;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #00a336
 }
 
 .user-perguntas-header h2 {
-	background-color: #00a336;
 	padding-top: 1%;
-	padding-bottom: 1%;
+	background-color: #00a336;
+	width: 40%;
+	margin-left: 30%;
+	margin-bottom: 0%;
+	color: white;
 }
 
 .user-perguntas-content {
