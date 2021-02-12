@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 from django.utils import timezone
 from ckeditor_uploader.fields import RichTextUploadingField
 
@@ -17,7 +18,7 @@ class post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     published_at = models.DateTimeField(default=timezone.now)
     modified_at = models.DateTimeField(auto_now=True)
-    slug = models.SlugField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True)
     status = models.CharField(max_length=15,
                               choices=STATUS,
                               default='rascunho')
@@ -27,3 +28,10 @@ class post(models.Model):
     
     def __str__(self):
         return f'{self.title}|{str(self.author)}'
+
+    def get_absolute_url(self):
+        return reverse('detail_blog', kwargs={'slug':self.slug})
+    def get_absolute_url_to_delete(self):
+        return reverse('delete_post', kwargs={'slug':self.slug})
+    def get_absolute_url_to_edit(self):
+        return reverse('edit_post', kwargs={'slug':self.slug})

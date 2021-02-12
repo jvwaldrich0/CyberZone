@@ -1,235 +1,64 @@
-{% extends 'index.html' %} {% block title %} {{user.username | title}} {%
-endblock title %} {% block content%}
+{% extends 'index.html' %} {% block title %} {{user.username | title}} {% endblock title %} 
+{% block content%}
+
+{% if user.is_authenticated %}
+
 <div class="pagina">
   <div class="user-header">
     <div class="user-perfil">
       <div class="user-header-header">
         <div class="user-background">
-          <img src="../../static/wallpapper.png" alt="" />
+          <img src="../../../media/{{extendsuser.profile_background}}" alt="user_background"/> 
         </div>
         <div class="user-img">
-          <img src="../../static/testebio.jpg" alt="" />
+          <img src="../../../../media/{{extendsuser.profile_picture}}"alt="user_img_profile"/>
         </div>
-        <div class="name-user">
-          <h2>Nome De Usuario</h2>
+        <div class="user-name">
+          <h2>{{extendsuser.nickname}}</h2>
         </div>
       </div>
       <div class="user-bio">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et massa
-        non sapien sollicitudin dictum eu eu nulla. Donec ipsum erat, luctus id
-        consectetur nec, interdum ut velit. Suspendisse consectetur maximus
-        eleifend. Fusce ac semper nunc. Morbi eget turpis odio. Nunc a pretium
-        erat. Vestibulum vitae dui posuere diam tincidunt placerat.
+        {{extendsuser.bio}}
       </div>
     </div>
   </div>
   <div class="user-atividade">
     <div class="user-artigos">
-      <div class="user-artigos-header"><h2>Artigos</h2></div>
+			<div class="user-artigos-header" style="color: #fff;">
+				<div class="user-novo-artigo-btn-container"></div>
+				<div class="user-header-h2-container">
+        	<h2>Artigos</h2>
+				</div>
+				<div class="user-novo-artigo-btn-container">
+					<div class="user-novo-artigo-btn">
+						<a href="{% url 'novo_artigo' %}" type="button">
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16" style="background-color:  #00a336;">
+								<path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+							</svg>
+						</a>
+          </div>
+				</div>
+      </div>
       <div class="user-artigos-content">
-        <div class="user-artigos-container">
-          <div class="card" style="width: 18rem; height: 27rem">
-            <img
-              style="width: 18rem"
-              class="card-img-top"
-              src="../../static/tes3.jpeg"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h4 class="card-title">
-                4 linguagens em crescimento no mercado de Data Science
-              </h4>
-              <p class="card-text">
-                Com outros assuntos ligados à tecnologia, Data Science ganhou
-                muita popularidade nos últimos anos.
-              </p>
-            </div>
-            <div class="botao">
-              <a href="#"><button>Mais</button></a>
-            </div>
-          </div>
-        </div>
-        <div class="user-artigos-container">
-          <div class="card" style="width: 18rem; height: 27rem">
-            <img
-              style="width: 18rem"
-              class="card-img-top"
-              src="../../static/tes3.jpeg"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h4 class="card-title">
-                4 linguagens em crescimento no mercado de Data Science
-              </h4>
-              <p class="card-text">
-                Com outros assuntos ligados à tecnologia, Data Science ganhou
-                muita popularidade nos últimos anos.
-              </p>
-            </div>
-            <div class="botao">
-              <a href="#"><button>Mais</button></a>
-            </div>
-          </div>
-        </div>
-        <div class="user-artigos-container">
-          <div class="card" style="width: 18rem; height: 27rem">
-            <img
-              style="width: 18rem"
-              class="card-img-top"
-              src="../../static/tes3.jpeg"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h4 class="card-title">
-                4 linguagens em crescimento no mercado de Data Science
-              </h4>
-              <p class="card-text">
-                Com outros assuntos ligados à tecnologia, Data Science ganhou
-                muita popularidade nos últimos anos.
-              </p>
-            </div>
-            <div class="botao">
-              <a href="#"><button>Mais</button></a>
-            </div>
-          </div>
-        </div>
-        <div class="user-artigos-container">
-          <div class="card" style="width: 18rem; height: 27rem">
-            <img
-              style="width: 18rem"
-              class="card-img-top"
-              src="../../static/tes3.jpeg"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h4 class="card-title">
-                4 linguagens em crescimento no mercado de Data Science
-              </h4>
-              <p class="card-text">
-                Com outros assuntos ligados à tecnologia, Data Science ganhou
-                muita popularidade nos últimos anos.
-              </p>
-            </div>
-            <div class="botao">
-              <a href="#"><button>Mais</button></a>
-            </div>
-          </div>
-        </div>
-        <div class="user-artigos-container">
-          <div class="card" style="width: 18rem; height: 27rem">
-            <img
-              style="width: 18rem"
-              class="card-img-top"
-              src="../../static/tes3.jpeg"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h4 class="card-title">
-                4 linguagens em crescimento no mercado de Data Science
-              </h4>
-              <p class="card-text">
-                Com outros assuntos ligados à tecnologia, Data Science ganhou
-                muita popularidade nos últimos anos.
-              </p>
-            </div>
-            <div class="botao">
-              <a href="#"><button>Mais</button></a>
-            </div>
-          </div>
-        </div>
-        <div class="user-artigos-container">
-          <div class="card" style="width: 18rem; height: 27rem">
-            <img
-              style="width: 18rem"
-              class="card-img-top"
-              src="../../static/tes3.jpeg"
-              alt="Card image cap"
-            />
-            <div class="card">
-              <div class="card-image"></div>
-              <div class="card-text">
-                <span class="date">4 days ago</span>
-                <h2>Post One</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae
-                  temporibus omnis illum maxime quod deserunt eligendi dolor
-                </p>
-              </div>
-              <div class="card-stats">
-                <div class="stat">
-                  <div class="value">4<sup>m</sup></div>
-                  <div class="type">read</div>
-                </div>
-                <div class="stat border">
-                  <div class="value">5123</div>
-                  <div class="type">views</div>
-                </div>
-                <div class="stat">
-                  <div class="value">32</div>
-                  <div class="type">comments</div>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-image card2"></div>
-              <div class="card-text card2">
-                <span class="date">1 week ago</span>
-                <h2>Post Two</h2>
-                <p>
-                  Adipisicing elit. Ducimus, repudiandae corrupti amet
-                  temporibus omnis provident illum maxime quod. Lorem ipsum
-                  dolor
-                </p>
-              </div>
-              <div class="card-stats card2">
-                <div class="stat">
-                  <div class="value">7<sup>m</sup></div>
-                  <div class="type">read</div>
-                </div>
-                <div class="stat border">
-                  <div class="value">7152</div>
-                  <div class="type">views</div>
-                </div>
-                <div class="stat">
-                  <div class="value">21</div>
-                  <div class="type">comments</div>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-image card3"></div>
-              <div class="card-text card3">
-                <span class="date">3 week ago</span>
-                <h2>Post Three</h2>
-                <p>
-                  Repudiandae corrupti amet temporibus omnis provident illum
-                  maxime. Ducimus, lorem ipsum dolor adipisicing elit
-                </p>
-              </div>
-              <div class="card-stats card3">
-                <div class="stat">
-                  <div class="value">5<sup>m</sup></div>
-                  <div class="type">read</div>
-                </div>
-                <div class="stat border">
-                  <div class="value">3021</div>
-                  <div class="type">views</div>
-                </div>
-                <div class="stat">
-                  <div class="value">15</div>
-                  <div class="type">comments</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="user-artigos-container"></div>
-        <div class="user-artigos-container"></div>
       </div>
     </div>
 
     <div class="user-perguntas">
-      <div class="user-perguntas-header"><h2>Perguntas</h2></div>
+      <div class="user-perguntas-header">
+				<div class="user-novo-artigo-btn-container"></div>
+				<div class="user-header-h2-container">
+        	<h2>Artigos</h2>
+				</div>
+				<div class="user-novo-artigo-btn-container">
+					<div class="user-novo-artigo-btn">
+						<a href="{% url 'novo_artigo' %}" type="button">
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16" style="background-color:  #00a336;">
+								<path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+							</svg>
+						</a>
+          </div>
+				</div>
+			</div>
       <div class="user-perguntas-content">
         <div class="user-perguntas-container">
           <div class="pergunta">
@@ -322,8 +151,16 @@ endblock title %} {% block content%}
             </div>
           </div>
         </div>
+                </div>
+</div>
+{% else %}
+<div class="logout_container">
+      <div class="cont">
+        <div class="containe">
+          
+        </div>
       </div>
     </div>
-  </div>
-</div>
+{% endif %}
+
 {% endblock content%}

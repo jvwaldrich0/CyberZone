@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-
+from apps.users.models import ExtendsUser
 
 class sign_up(UserCreationForm):
 	email = forms.EmailField(required=True)
