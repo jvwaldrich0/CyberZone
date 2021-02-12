@@ -7,23 +7,26 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/../static/login.css" />
+    <link rel="stylesheet" href="/../static/style.css" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Novo Artigo</title>
 </head>
 <body style='background-color: rgb(17, 17, 17);'>
-        <div class="containe">
-            <div class="banana">
-                <h1 class="font-weight-bold mt-3">Criar Novo Artigo</h1>
-                <form class="sign-in-form" method="post" action='' enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {{form.media}}
-                    {{form.as_p}}
-                    <button class="btn btn-success" type="submit">Enviar artigo</button>
-                </form>
-                
-           </div> 
+    <div class="containe">
+    </div>
+    <div class="containe">
+        <div class="banana">
+            <h1 class="font-weight-bold mt-3">Criar Novo Artigo</h1>
         </div>
- 		</div>
+        <div class="banana">
+            <form class="sign-in-form" method="post" action='' enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form.media}}
+                {{form.as_p}}
+                <button class="btn btn-success" type="submit">Enviar artigo</button>
+            </form>
+       </div>
+    </div>
 <script>
     var name = "{{ user.id }}";
     document.getElementById("elder").value = name;
