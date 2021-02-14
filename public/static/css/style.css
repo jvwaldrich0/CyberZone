@@ -288,6 +288,7 @@ a.active, a:hover {
 	display: grid;
 	grid-template-columns: repeat(16, 1fr);
 	row-gap: 4rem;
+	
 }
 
 .cursos:nth-child(2) {
