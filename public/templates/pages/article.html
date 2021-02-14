@@ -1,0 +1,51 @@
+{% extends 'home.html'%} {% block title %} Artigos {% endblock title %} 
+{% block content %}
+<!-- background de Artigos -->
+<div
+          style="justify-content: center;width: 100%; padding: 3%"
+          class="btn-group"
+          role="group"
+          aria-label="Basic example"
+        >
+          <a
+            style="width: 100%"
+            href="{% url 'novo_artigo' %}"
+            type="button"
+            class="btn btn-success btn-lg"
+            ><ion-icon style="background-color:transparent"name="add-outline"></ion-icon> Novo Artigo </a
+          >
+        </div>
+<div class="user-artigos-content">
+  {% for post in object_list %}
+  <div
+          class="card"
+          style="
+            width: 23rem;
+            padding-top:50px;
+            padding-color:transparent;
+            border-color: transparent;
+            {% if user.id == post.author.id %}background: transparent;{% else %}background-color: rgb(26, 25, 25);{% endif %}
+            transition-duration: 0.5s;
+          "
+        >
+          <img
+            class="card-img-top"
+            src="../../../media/{{post.background}}"
+            alt="Card image cap"
+          />
+          <div style=" height:400px;
+          {% if user.id == post.author.id %}background-color: #021d05;{% else %}background-color: rgb(26, 25, 25);{% endif %}"class="card-body">
+            <h4 style="color: #fff; background: transparent" class="card-title">{{post.title}}</h4>
+            <p style="color: grey; background: transparent" class="card-text">{{post.summary}}</p>
+            <a
+              href="{{post.get_absolute_url}}"
+              type="button"
+              class="btn btn-success"
+              >Ler Artigo</a
+            >
+          </div>
+        </div>
+  {% endfor %}
+</div>
+
+{% endblock content %}

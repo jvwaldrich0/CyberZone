@@ -1,0 +1,315 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %} CyberZone {% endblock title %}</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../static/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../static/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../static/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../../static/site.webmanifest" />
+  </head>
+  <body
+    class="fadeIn"
+    style="background-color: rgb(20, 20, 20); width: 100%; height: 100%"
+  >
+    <!-- Barra de navegação -->
+    <div class="l-navbar" id="navbar">
+      <nav class="nav">
+        <div>
+          <div class="nav__brand">
+            <ion-icon
+              name="menu-outline"
+              class="nav__toggle"
+              id="nav-toggle"
+            ></ion-icon>
+            <a style="color: inherit; text-decoration: none;" href="{% url 'home' %}" class="nav__logo">CyberZone</a>
+          </div>
+          <div class="nav__list">
+            <a style="color: inherit; text-decoration: none;" href="{% url 'home' %}" class="nav__link active">
+              <ion-icon style="color: white; background:transparent" name="home-outline" class="nav__icon"></ion-icon>
+              <span style="color: white; background:transparent" class="nav__name">Home</span>
+            </a>
+            <a style="color: inherit; text-decoration: none;" href="{% url 'blog' %}" class="nav__link">
+              <ion-icon style="color: white; background:transparent"  name="library-outline" class="nav__icon"></ion-icon>
+              <span style="color: white; background:transparent" class="nav__name">Artigos</span>
+            </a>
+            <a style="color: inherit; text-decoration: none;" href="{% url 'about' %}" class="nav__link">
+              <ion-icon style="color: white; background:transparent"  name="information-circle-outline" class="nav__icon"></ion-icon>
+              <span style="color: white; background:transparent" class="nav__name">Sobre</span>
+            </a>
+          </div>
+        </div>
+        <div style="padding-right: 10px">
+          {% if user.is_authenticated %}
+          <a style="color: inherit;" href="{% url 'user_home' user.id %}" class="nav__link">
+            <ion-icon style="color: white; background:transparent" name="person-circle-outline" class="nav__icon"></ion-icon>
+            <span style="color: white; background:transparent" class="nav__name">{{user.username|title}}</span>
+          </a>
+          
+          <a style="color: inherit; text-decoration: none;" href="{% url 'update_user_settings' %}" class="nav__link">
+            <ion-icon style="color: white; background:transparent"  name="settings-outline" class="nav__icon"></ion-icon>
+            <span style="color: white; background:transparent"class="nav__name">Editar Conta</span>
+          </a>
+          <a style="color: inherit; text-decoration: none;" href="{% url 'logout' %}" class="nav__link">
+            <ion-icon style="color: white; background:transparent"  name="log-out-outline" class="nav__icon"></ion-icon>
+            <span style="color: white; background:transparent" class="nav__name">Log Out</span>
+          </a>
+          {% else %}
+          <a style="color: inherit; text-decoration: none;" href="{% url 'account'  %}" class="nav__link">
+            <ion-icon style="color: white; background:transparent"  name="log-in-outline" class="nav__icon"></ion-icon>
+            <span style="color: white; background:transparent" class="nav__name">Login</span>
+          </a>
+          {% endif %}
+        </div>
+      </nav>
+    </div>
+    {% block content %}
+    <div>
+      <div id="slider" class="ban">
+        <img class="selected" src="../../static/bn2.jpg" alt="Image1" />
+        <img src="../../static/bn4.jpg" alt="Image2" />
+        <img src="../../static/bn3.jpg" alt="Image3" />
+        <img src="../../static/cabecalho.jpg" alt="Image4" />
+      </div>
+    </div>
+    <section class="sessao-cursos">
+      <div class="section-header">
+        <h1>Cursos</h1>
+      </div>
+      <div class="cursos">
+        <div class="curso">
+          <div class="curso-header">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 50 50"
+              width="50px"
+              height="50px"
+            >
+              <g id="surface5289265">
+                <rect
+                  x="0"
+                  y="0"
+                  width="50"
+                  height="50"
+                  style="
+                    fill: rgb(10.196079%, 9.803922%, 9.803922%);
+                    fill-opacity: 1;
+                    stroke: none;
+                  "
+                />
+                <path
+                  style="
+                    stroke: none;
+                    fill-rule: nonzero;
+                    fill: rgb(100%, 100%, 100%);
+                    fill-opacity: 1;
+                  "
+                  d="M 24.5 2 C 15.800781 2 14 6.492188 14 9.09375 L 14 14 L 24 14 L 24 15 L 9.09375 15 C 5.792969 15 2 17.601562 2 25 C 2 32.398438 5.792969 35 9.09375 35 L 15 35 L 15 29 C 15 26.800781 16.800781 25 19 25 L 31 25 C 32.699219 25 34 23.699219 34 22 L 34 9.09375 C 34 5.59375 30.699219 2 24.5 2 Z M 20 7 C 21.101562 7 22 7.898438 22 9 C 22 10.101562 21.101562 11 20 11 C 18.898438 11 18 10.101562 18 9 C 18 7.898438 18.898438 7 20 7 Z M 35 15 L 35 22 C 35 24.199219 33.199219 26 31 26 L 19 26 C 17.300781 26 16 27.300781 16 29 L 16 40.90625 C 16 44.40625 19.300781 48 25.5 48 C 34.199219 48 36 43.507812 36 40.90625 L 36 36 L 26 36 L 26 35 L 40.90625 35 C 44.207031 35 48 32.398438 48 25 C 48 17.601562 44.207031 15 40.90625 15 Z M 30 39 C 31.101562 39 32 39.898438 32 41 C 32 42.101562 31.101562 43 30 43 C 28.898438 43 28 42.101562 28 41 C 28 39.898438 28.898438 39 30 39 Z M 30 39 "
+                />
+              </g>
+            </svg>
+            <h3>Python</h3>
+          </div>
+        </div>
+        <div class="curso-text">
+          <p>
+            Você vai criar programas usando a última versão do Python e vai se
+            preparar para usá-lo na web com frameworks como Django ou ainda dar
+            seus primeiros passos para chegar à Data Science e Machine Learning.
+            Saiba como começar com Python.
+          </p>
+        </div>
+      </div>
+      <div class="cursos">
+        <div class="curso">
+          <div class="curso-header">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 50 50"
+              width="50px"
+              height="50px"
+            >
+              <g id="surface5291037">
+                <rect
+                  x="0"
+                  y="0"
+                  width="50"
+                  height="50"
+                  style="
+                    fill: rgb(10.196079%, 9.803922%, 9.803922%);
+                    fill-opacity: 1;
+                    stroke: none;
+                  "
+                />
+                <path
+                  style="
+                    stroke: none;
+                    fill-rule: nonzero;
+                    fill: rgb(100%, 100%, 100%);
+                    fill-opacity: 1;
+                  "
+                  d="M 45.273438 2.324219 C 45.085938 2.117188 44.816406 2 44.535156 2 L 5.464844 2 C 5.183594 2 4.914062 2.117188 4.726562 2.324219 C 4.535156 2.53125 4.441406 2.808594 4.46875 3.089844 L 7.988281 42.515625 C 8.023438 42.929688 8.3125 43.273438 8.710938 43.390625 L 24.722656 47.960938 C 24.808594 47.988281 24.902344 48 24.996094 48 C 25.089844 48 25.179688 47.988281 25.269531 47.960938 L 41.292969 43.390625 C 41.691406 43.273438 41.976562 42.929688 42.015625 42.515625 L 45.53125 3.089844 C 45.558594 2.808594 45.464844 2.53125 45.273438 2.324219 Z M 36.847656 15.917969 L 18.035156 15.917969 L 18.484375 21.007812 L 36.394531 21.007812 L 35.050781 36.050781 L 24.992188 39.089844 L 24.894531 39.058594 L 14.953125 36.046875 L 14.410156 29.917969 L 19.28125 29.917969 L 19.492188 32.296875 L 25.050781 33.460938 L 30.507812 32.296875 L 31.089844 25.859375 L 14.046875 25.859375 L 12.722656 11.054688 L 37.28125 11.054688 Z M 36.847656 15.917969 "
+                />
+              </g>
+            </svg>
+            <h3>HTML e CSS</h3>
+          </div>
+        </div>
+        <div style="color: grey" class="curso-text">
+          <p>
+            HTML e CSS da maneira certa e usando boas práticas da web,
+            estruturando seu código para legibilidade e layouts verdadeiramente
+            interessantes, com uso de bibliotecas e ferramentas. Sites
+            responsivos, bootstrap, devtools, flexbox são assuntos importantes
+            cobertos pelos cursos. Saiba como começar com HTML e CSS.
+          </p>
+        </div>
+      </div>
+      <div class="cursos">
+        <div class="curso">
+          <div class="curso-header">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 50 50"
+              width="50px"
+              height="50px"
+            >
+              <g id="surface5197879">
+                <rect
+                  x="0"
+                  y="0"
+                  width="50"
+                  height="50"
+                  style="
+                    fill: rgb(10.196079%, 9.803922%, 9.803922%);
+                    fill-opacity: 1;
+                    stroke: none;
+                  "
+                />
+                <path
+                  style="
+                    stroke: none;
+                    fill-rule: nonzero;
+                    fill: rgb(100%, 100%, 100%);
+                    fill-opacity: 1;
+                  "
+                  d="M 43.335938 4 L 6.667969 4 C 5.195312 4 4 5.195312 4 6.667969 L 4 43.332031 C 4 44.804688 5.195312 46 6.667969 46 L 43.332031 46 C 44.804688 46 46 44.804688 46 43.335938 L 46 6.667969 C 46 5.195312 44.804688 4 43.335938 4 Z M 27 36.183594 C 27 40.179688 24.65625 42 21.234375 42 C 18.140625 42 15.910156 39.925781 15 38 L 18.144531 36.097656 C 18.75 37.171875 19.671875 38 21 38 C 22.269531 38 23 37.503906 23 35.574219 L 23 23 L 27 23 Z M 35.675781 42 C 32.132812 42 30.121094 40.214844 29 38 L 32 36 C 32.816406 37.335938 33.707031 38.613281 35.589844 38.613281 C 37.171875 38.613281 38 37.824219 38 36.730469 C 38 35.425781 37.140625 34.960938 35.402344 34.199219 L 34.449219 33.789062 C 31.695312 32.617188 29.863281 31.148438 29.863281 28.039062 C 29.863281 25.179688 32.046875 23 35.453125 23 C 37.878906 23 39.621094 23.84375 40.878906 26.054688 L 37.910156 27.964844 C 37.253906 26.789062 36.550781 26.328125 35.453125 26.328125 C 34.335938 26.328125 33.628906 27.039062 33.628906 27.964844 C 33.628906 29.109375 34.335938 29.570312 35.972656 30.28125 L 36.925781 30.691406 C 40.171875 32.078125 42 33.496094 42 36.683594 C 42 40.117188 39.300781 42 35.675781 42 Z M 35.675781 42 "
+                />
+              </g>
+            </svg>
+            <h3>JavaScript</h3>
+          </div>
+        </div>
+        <div style="color: grey" class="curso-text">
+          <p>
+            Aprenda tudo o que precisa para entrar ou se desenvolver na área que
+            mais tem demanda por novos profissionais. Vá do zero ao profissional
+            nas linguagens, frameworks, ferramentas e metodologias mais
+            utilizadas no mercado atual.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sessao-artigos">
+      <div style="width: 100%; background-color: #00a336" class="al-atigos">
+        <div style="width: 100%; background-color: #00a336"class="section-header2">
+          <a href="{% url 'blog' %}"><h1>Últimos Artigos</h1> </a>
+        </div>
+        <div style="width: 100%; background-color: #00a336"class="espaço-artigos">
+          <div style="width: 100%; background-color: #00a336"class="area-artigos">
+            {% for post in posts|slice:":3" %}
+
+        <div
+          class="card"
+          style="
+            width: 100%;
+            margin: 2%;
+            position: relative;
+            background-color: transparent;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+            transition-duration: 0.5s;
+          "
+        >
+              <img
+                class="card-img-top"
+                src="../../../media/{{post.background}}"
+                alt="Card image cap"
+              />
+              <div style="height:400px;
+              {% if user.id == post.author.id %}background-color: #001f0a;{% else %}background-color: rgb(26, 25, 25);{% endif %}"
+              class="card-body">
+                <h4 style="color: #fff; background: transparent" class="card-title">{{post.title}}</h4>
+                <p style="color: grey; background: transparent" class="card-text">{{post.summary}}</p>
+                <a
+                  href="{{post.get_absolute_url}}"
+                  type="button"
+                  class="btn btn-success"
+                  >Ler Artigo</a
+                >
+              </div>
+            </div>          
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% endblock content %}
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    
+    <script src="../../static/script.js"></script>
+    <!-- ===== IONICONS ===== -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <!-- ===== MAIN JS ===== -->
+    <script src="../../static/main.js"></script>
+  </body>
+</html>

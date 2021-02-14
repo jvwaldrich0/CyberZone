@@ -1,0 +1,121 @@
+{% extends 'home.html' %} {% block title %} {{user.username | title}} 
+{% endblock title %} {% block content%} {% if user.is_authenticated %}
+
+<div class="pagina">
+  <div class="user-header">
+    <div class="user-perfil">
+      <div class="user-header-header">
+        <div class="user-background">
+          <img src="{{extendsuser.profile_background.url}}" alt="" />
+        </div>
+
+        <div class="user-img">
+          <img src="{{extendsuser.profile_picture.url}}" alt="" />
+        </div>
+
+        <div style="color: white" class="name-user">
+          <h2>
+            {{extendsuser.user.first_name }} {{extendsuser.user.last_name }}
+            {% if user.is_authenticated %} {% if user.id == extendsuser.id %}
+            <p>
+              <small>
+                <a
+                  style="color: green; justify-content: right"
+                  href="{% url 'update_user_profile' user.id %}"
+                  ><ion-icon name="build-outline"></ion-icon> Modificar Perfil
+                </a>
+              </small>
+            </p>
+            {% endif %}{% endif %}
+          </h2>
+        </div>
+      </div>
+      <div style="padding: 1.5%; ">
+        <small
+          ><blockquote class="blockquote text-center">
+            <p style="color: grey" class="mb-0">{{extendsuser.bio}}</p>
+          </blockquote></small
+        >
+      </div>
+    </div>
+  </div>
+  <div class="user-atividade">
+    <div class="user-artigos">
+      <div class="user-artigos-header" style="color: #fff">
+        <h2>Artigos</h2>
+        {% if user.is_authenticated %} {% if user.id == extendsuser.id %}
+
+        <div
+          style="justify-content: center"
+          class="btn-group"
+          role="group"
+          aria-label="Basic example"
+        >
+          <a
+            style="width: 100%"
+            href="{% url 'novo_artigo' %}"
+            type="button"
+            class="btn btn-outline-success btn-lg"
+            ><ion-icon style="background-color:transparent"name="add-outline"></ion-icon> Novo Artigo </a
+          >
+        </div>
+        {% endif %}{% endif %}
+
+      </div>
+
+      <div class="user-artigos-content">
+        {% for post in posts %} {% if post.author.id == extendsuser.id %}
+        <div
+          class="card"
+          style="
+            width: 23rem;
+            background-color: #1c1b29;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+            transition-duration: 0.5s;
+          "
+        >
+          <img
+            class="card-img-top"
+            src="../../../media/{{post.background}}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h4 style="color: #fff" class="card-title">{{post.title}}</h4>
+            <p style="color: grey" class="card-text">{{post.summary}}</p>
+            <a
+              href="{{post.get_absolute_url}}"
+              type="button"
+              class="btn btn-success"
+              >Ler Artigo</a
+            >
+          </div>
+        </div>
+        {% endif %} {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <div class="logout_container">
+    <div class="cont">
+      <div class="containe"></div>
+    </div>
+  </div>
+  {% endif %}
+  <div
+    style="padding-top: 5%; width: 100%; justify-content: center"
+    class="btn-group"
+    role="group"
+    aria-label="Basic example"
+  >
+    <br />
+    <a
+      style="width: 96%"
+      href="{% url 'update_user_settings' %}"
+      type="button"
+      class="btn btn-outline-danger"
+      >Mudar Configurações do usuário</a
+    >
+  </div>
+</div>
+
+{% endblock content%}
