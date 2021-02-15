@@ -1,6 +1,7 @@
 {% extends 'home.html'%} {% block title %} Artigos {% endblock title %} 
 {% block content %}
 <!-- background de Artigos -->
+{% if user.is_authenticated %}
 <div
           style="justify-content: center;width: 100%; padding: 3%"
           class="btn-group"
@@ -15,6 +16,7 @@
             ><ion-icon style="background-color:transparent"name="add-outline"></ion-icon> Novo Artigo </a
           >
         </div>
+{% endif %}
 <div class="user-artigos-content">
   {% for post in object_list %}
   <div
