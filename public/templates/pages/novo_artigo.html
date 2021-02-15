@@ -1,35 +1,20 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="/../static/login.css" />
-    <title>Esqueceu a senha?</title>
-</head>
+{% extends 'home.html' %}
+{% block content %}
 <body style='background-color: rgb(17, 17, 17);'>
-    <div class="cont">
-        <div class="containe">
-            <div class="banana">
-            {% if user.is_authenticated %}
-                <h1 class="font-weight-bold mt-3">Esqueceu a senha?</h1>
-                <p>Insira seu email abaixo, e nós iremos lhe oferecer instruções para redefinir sua senha.</p>
-                <form class="sign-in-form" method="post">
-                    {% csrf_token %}
-                    <div class="input-field">
-                      <i class="fas fa-envelope"></i>
-                      {{form.email}}
-                    </div>  
-                    <button class="btn btn-primary" type="submit">Enviar email</button>
-                </form>
-            {% else  %}
-            <h1 class="font-weight-bold mt-3">Você não deveria estar aqui</h1>
-            <p>e você provavelmente sabe disso ...</p>
-            {% endif %}
-           </div> 
-        </div>
-    </div>
-</body>
-</html>
+            
+                <div class="forum-header">
+                    <h1 class="font-weight-bold mt-3">Criar Artigo</h1>
+                    </div>
+                    <div class="containe">
+                <div class="banana">
+                    <form class="sign-in-form" method="post" action='' enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{form.media}}
+                        {{form.as_p}}
+                        
+                        <button class="btn btn-success" type="submit">Confirmar</button>
+                    </form>
+                    
+            </div>
+            </div>
+{% endblock content %}
