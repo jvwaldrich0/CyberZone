@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/../static/login.css" />
     <title>Sign in & Sign up</title>
   </head>
-  <body style="background-color: rgb(17, 17, 17);width:100%;">
+  <body style="background-color: rgb(17, 17, 17); width: 100%">
     {% if user.is_authenticated %}
     <div class="logout_container">
       <div class="cont">
@@ -44,28 +44,16 @@
               {{login_form.password}}
             </div>
             <button type="submit" class="btn solid">Entrar</button>
-            
+
             <div style="color: darkred; width: 50%"></div>
             <a style="color: greenyellow" href="{% url 'reset_password' %}"
               >Esqueceu a senha?</a
             >
-            <p class="social-text">
-              Ou você pode fazer login com as redes sociais :)
-            </p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
+            {% for message in messages %}
+                <div style="color:red;"class="alert alert-danger" role="alert">
+                  {{ message }}
+                </div>
+            {% endfor %}
           </form>
           <form class="sign-up-form" method="post" action="">
             {% csrf_token %}
@@ -89,23 +77,11 @@
             <button type="submit" value="Login" class="btn solid">
               Submit
             </button>
-            {{register_form.errors}}
-            
-            <p class="social-text">Or Sign up with social platforms</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
+            {% for message in messages %}
+                <div style="color:red;"class="alert alert-danger" role="alert">
+                  {{ message }}
+                </div>
+              {% endfor %}
           </form>
         </div>
       </div>

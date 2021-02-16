@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'apps.forum',
     'apps.users',
     'ckeditor',
-    'ckeditor_uploader'
+    'ckeditor_uploader',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -147,6 +148,7 @@ EMAIL_POST = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'meutccentra21@gmail.com'
 EMAIL_HOST_PASSWORD = 'MeuTCCEntra21'
+CRISPY_TEMPLATE_PACK = 'bootstrap'
 
 STATICFILES_DIRS = (
     join(BASE_DIR.parent, 'public/static/css'),

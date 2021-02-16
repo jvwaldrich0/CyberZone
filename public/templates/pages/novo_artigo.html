@@ -1,20 +1,39 @@
 {% extends 'home.html' %}
 {% block content %}
-<body style='background-color: rgb(17, 17, 17);'>
-            
-                <div class="forum-header">
-                    <h1 class="font-weight-bold mt-3">Criar Artigo</h1>
-                    </div>
-                    <div class="containe">
+  {% if user.is_authenticated %}
+            <div class="containe">
                 <div class="banana">
+                    <h1 class="font-weight-bold mt-3">Criar Novo Artigo</h1>
                     <form class="sign-in-form" method="post" action='' enctype="multipart/form-data">
                         {% csrf_token %}
                         {{form.media}}
-                        {{form.as_p}}
-                        
-                        <button class="btn btn-success" type="submit">Confirmar</button>
+                        {% for field in form %}
+                        <p>
+                            {{ field.label_tag }}
+                            {{ field }}
+                            {{ field.help_text }}
+                            {{ field.errors }}
+                        </p>
+                        {% endfor %}
+                        <button class="btn btn-success" type="submit">Enviar artigo</button>
                     </form>
-                    
+            </div> 
             </div>
             </div>
+    <script>
+        var name = "{{ user.id }}";
+        document.getElementById("elder").value = name;
+    </script>
+    {% else %}
+      <div class="cont">
+        <div class="containe">
+          <div class="banana">
+            <h1 class="font-weight-bold mt-3">
+              Você não deveria estar aqui!
+            </h1>
+          </div>
+        </div>
+      </div>
+    
+    {% endif%}
 {% endblock content %}
