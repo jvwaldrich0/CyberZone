@@ -8,7 +8,51 @@
     {{post.author.first_name}} {{post.author.last_name}}
   </a>
   <br/>
-  <a href=""><img src="{{post.author.extendsuser.profile_picture.url}}" alt="" /></a>
+  <div class="sob">
+  <div class="pagina">
+  <div class="space"></div>
+  <div class="sobre-biografia">
+        <img class="user-img" src="{{post.author.extendsuser.profile_picture.url}}" alt="gato" />
+        <div class="biografia-box">
+          <div class="biografia-header">
+            <div class="biografia-nome">
+              <h1 style="margin-left: 4%">{{post.author.first_name}} {{post.author.last_name}}</h1>
+            </div>
+            <div class="biografia-links">
+              <div>
+                <a href=""
+                  ><img src="fotos\RedesSociais\github-preto.png" alt=""
+                /></a>
+              </div>
+              <div>
+                <a href=""
+                  ><img src="fotos\RedesSociais\twitter.png" alt=""
+                /></a>
+              </div>
+              <div>
+                <a href=""><img src="fotos\RedesSociais\insta.png" alt="" /></a>
+              </div>
+              <div>
+                <a href=""
+                  ><img src="fotos\RedesSociais\patreon.png" alt=""
+                /></a>
+              </div>
+              <div>
+                <a href=""
+                  ><img src="fotos\RedesSociais\patreon.png" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div style="height: 3%"></div>
+          <div class="biografia-texto">
+            {{post.author.extendsuser.bio}}
+          </div>
+        </div>
+      </div></div>
+          </div>
+      </div>
+
   <br/>
   {% if user.is_authenticated %} {% if user.id == post.author.id %}
   <div class="spaces">
