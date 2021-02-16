@@ -21,6 +21,7 @@ from apps.forum.models import question
 from apps.users.views import user_home, update_user, update_user_password, update_user_password_success, update_user_settings
 from apps.users.models import ExtendsUser
 
+
 data  = {'blog':post,
          'forum':question,
          'extendsuser':ExtendsUser}
