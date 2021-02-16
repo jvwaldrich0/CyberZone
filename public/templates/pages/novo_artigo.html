@@ -7,7 +7,14 @@
                     <form class="sign-in-form" method="post" action='' enctype="multipart/form-data">
                         {% csrf_token %}
                         {{form.media}}
-                        {{form.as_p}}
+                        {% for field in form %}
+                        <p>
+                            {{ field.label_tag }}
+                            {{ field }}
+                            {{ field.help_text }}
+                            {{ field.errors }}
+                        </p>
+                        {% endfor %}
                         <button class="btn btn-success" type="submit">Enviar artigo</button>
                     </form>
             </div> 
