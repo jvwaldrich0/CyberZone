@@ -428,6 +428,13 @@ a.active, a:hover {
 	border-radius: 5px;
 }
 
+.edit-back input{
+	padding: 2%;
+	background-color: #242847;
+	color: #fff;
+	border-radius: 5px;
+}
+
 
 .bi-bi-trash {
  float: right;

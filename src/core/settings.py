@@ -134,7 +134,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap'
 STATICFILES_DIRS = (
     join(BASE_DIR.parent, 'public/static/css'),
     join(BASE_DIR.parent, 'public/static/img'),
-    join(BASE_DIR.parent, 'public/static/fonts'),
     join(BASE_DIR.parent, 'public/static/javascript')    
 )
 
