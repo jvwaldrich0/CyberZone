@@ -1,5 +1,4 @@
 {% load static %}
-{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,24 +18,10 @@
       crossorigin="anonymous"
     />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../../static/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../../static/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../../static/favicon-16x16.png"
-    />
-    <link rel="manifest" href="../../static/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../../static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../../static/favicon-16x16.png">
+<link rel="manifest" href="../../../../static/site.webmanifest">
   </head>
   <body
     class="fadeIn"
@@ -245,43 +230,47 @@
     </section>
 
     <section class="sessao-artigos">
-      <div style="width: 100%; background-color: #00a336" class="al-atigos">
-        <div style="width: 100%; background-color: #00a336"class="section-header2">
-          <a href="{% url 'blog' %}"><h1>Últimos Artigos</h1> </a>
+      <div style="width: 100%; background-color: #242847" class="al-atigos">
+        <div style="width: 100%; background-color: #242847"class="section-header2">
+          <a style="text-decoration:none" href="{% url 'blog' %}"><h1>Últimos Artigos</h1> </a>
         </div>
-        <div style="width: 100%; background-color: #00a336"class="espaço-artigos">
-          <div style="width: 100%; background-color: #00a336"class="area-artigos">
+        <div style="width: 100%; background-color:#242847"class="espaço-artigos">
+          <div style="width: 100%; background-color: #242847"class="area-artigos">
             {% for post in posts|slice:":3" %}
-
-        <div
-          class="card"
-          style="
-            width: 100%;
-            margin: 2%;
-            position: relative;
-            background-color: transparent;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
-            transition-duration: 0.5s;
-          "
-        >
-              <img
-                class="card-img-top"
-                src="../../../media/{{post.background}}"
-                alt="Card image cap"
-              />
-              <div style="height:400px;
-              {% if user.id == post.author.id %}background-color: #001f0a;{% else %}background-color: rgb(26, 25, 25);{% endif %}"
-              class="card-body">
-                <h4 style="color: #fff; background: transparent" class="card-title">{{post.title}}</h4>
-                <p style="color: grey; background: transparent" class="card-text">{{post.summary}}</p>
-                <a
-                  href="{{post.get_absolute_url}}"
-                  type="button"
-                  class="btn btn-success"
-                  >Ler Artigo</a
-                >
-              </div>
-            </div>          
+            <a href="{{post.get_absolute_url}}"
+            style="
+              text-decoration: none; 
+              margin: 1%;">
+             <div
+               class="card"
+               style="
+                 width: 23rem;
+                 margin: 1.5%;
+                 padding-color:transparent;
+                 border-color: transparent;
+                 {% if user.id == post.author.id %}background: transparent;{% else %}background-color: rgb(26, 25, 25);{% endif %}
+                 transition-duration: 0.5s;"
+             >
+             <img
+               class="card-img-top"
+               style="
+                 border-top-left-radius: calc(.25rem - 1px);
+                 border-top-right-radius: calc(.25rem - 1px);
+                 width: 100%;
+                 height: 16rem;
+                 object-fit: cover;"
+               src="../../../media/{{post.background}}"
+               alt="Card image cap"
+             />
+             <div style="
+               height:400px;
+               padding: 5%;
+               {% if user.id == post.author.id %}background-color: #3b3a50;{% else %}background-color: #1c1b29;"{% endif %}class="card-body">
+               <h4 style="color: #fff; background: transparent" class="card-title">{{post.title}}</h4>
+               <p style="color: grey; background: transparent" class="card-text">{{post.summary}}</p>
+             </div>
+             </div>
+           </a>          
             {% endfor %}
 
           </div>
@@ -291,7 +280,7 @@
   <div class="al-forum">
     <div class="forum-header">
     <div>
-      <h1>Estamos no <bold style="color:green">Discord</bold> !</h1>
+      <h1>Estamos no <bold style="color:#2f3352">Discord</bold> !</h1>
     </div>
     </div>
     <div>
@@ -301,62 +290,7 @@
       <img style="width: 50%" src="{% static 'register.svg' %}" class="image" alt="" />
       
 <iframe style="width:45%" src="https://discord.com/widget?id=788515960087904276&theme=dark" width="300" height="370" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>    </div>
-  <div class="al-forum">
-    <div class="forum-header">
-    <div>
-      <h1>Conheça os desenvolvedores :)<bold></h1>
-    </div>
-    </div>
-    <div>
-    <div class="card-deck">
-  <div class="card" style="width: 100%;
-            margin: 2%;
-            position: relative;
-            background-color: transparent;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
-            transition-duration: 0.5s;">
-    <img src="{% static 'joao.jpg'%}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card"style="width: 100%;
-            margin: 2%;
-            position: relative;
-            background-color: transparent;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
-            transition-duration: 0.5s;">
-    <img src="{% static 'joao.jpg'%}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card"style="width: 100%;
-            margin: 2%;
-            position: relative;
-            background-color: transparent;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
-            transition-duration: 0.5s;">
-    <img src="{% static 'joao.jpg'%}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div style:"padding-bottom: 10px;" class="card-footer">
-       <a style=" color: white ;  text-decoration: none;"href="https://github.com/jvwaldrich0/Cyberzone"> <ion-icon style="height:100%; width:100%;" name="logo-github"></ion-icon>
-    </div>
-  </div>
-</div>
-  </div>
-</section>
+    </section>
     {% endblock content %}
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

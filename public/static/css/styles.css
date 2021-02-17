@@ -6,9 +6,9 @@
   --nav-width: 92px;
 
   /*===== Colores =====*/
-  --first-color: #017e2b;
+  --first-color: #242847;
   --bg-color: rgb(26, 25, 25);
-  --sub-color: #3d8153;
+  --sub-color: #2f3352;
   --white-color: rgb(255, 255, 255);
   
   /*===== Fuente y tipografi  a =====*/
@@ -43,11 +43,11 @@ ul{
 }
 a{
   text-decoration: none;
-  color: rgb(12, 165, 50);
+  color: #313869;
 }
 
 a:hover{
-  color: #017e2b;
+  color:#242847;
 }
 
 /*===== l NAV =====*/

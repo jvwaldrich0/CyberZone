@@ -4,22 +4,26 @@
             <div class="containe">
                 <div class="banana">
                     <h1 class="font-weight-bold mt-3">Criar Novo Artigo</h1>
-                    <form class="sign-in-form" method="post" action='' enctype="multipart/form-data">
-                        {% csrf_token %}
-                        {{form.media}}
-                        {% for field in form %}
-                        <p>
-                            {{ field.label_tag }}
-                            {{ field }}
-                            {{ field.help_text }}
-                            {{ field.errors }}
-                        </p>
-                        {% endfor %}
-                        <button class="btn btn-success" type="submit">Enviar artigo</button>
-                    </form>
+                    
               </div> 
             </div>
           </div>
+          <form class="sign-in-form" method="post" action='' enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{form.media}}
+                        <div class='edit-back'>
+                          <bold>{{form.background.label_tag}}{{form.background}}</bold>
+                        <h3 style='color:white; padding-top: 20px;'>Titulo</h3>
+                        {{form.title}}
+                        <h3 style='color:white; padding-top: 20px;'>Sumário</h3>
+                        {{form.summary}}
+                        <h3 style='color:white; padding-top: 20px;'>Conteúdo</h3>
+                        {{form.content}}
+                        {{form.author}}
+                        </div>
+                        
+                        <button class="btn btn-primary" type="submit">Enviar artigo</button>
+                    </form> 
     <script>
         var name = "{{ user.id }}";
         document.getElementById("elder").value = name;

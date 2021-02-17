@@ -2,7 +2,7 @@
 -- background do body - background-color: rgb(26, 25, 25); 
 -- background da segunda tabela - background-color: #363636;
 -- cor de texto - color: white;
--- background dos icones - background: #00a336;
+-- background dos icones - background: #242847;
 -- background dos artigos - background: gray;
 */
 
@@ -103,7 +103,7 @@ nav ul li a {
 	text-transform: uppercase;
 }
 a.active, a:hover {
-	background: #00a336;
+	background: #242847;
 	transition: .5s;
 }
 .checkbtn {
@@ -142,7 +142,7 @@ a.active, a:hover {
 		position: fixed;
 		width: 22.5rem;
 		height: 110vh;
-		background:  #017e2b;
+		background: #242847;
 		right: -100%;
 		text-align: center;
 		transition: all .5s;
@@ -165,7 +165,7 @@ a.active, a:hover {
 	}
 	a:hover, a.active {
 		background-color: #222222;
-		color:  #00a336;
+		color:#242847;
 	}
 	#check:checked ~ ul {
 		background-color: #222222;
@@ -181,7 +181,7 @@ a.active, a:hover {
 	width: 130px;
 	height: 130px;
 	border-radius: 50%;
-	border: 2px solid #00a336;
+	border: 2px solid #242847;
 	
 }
 
@@ -254,7 +254,7 @@ a.active, a:hover {
 .section-header h1 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 3rem;
-	border-bottom: 3px solid #017e2b;
+	border-bottom: 3px solid #242847;
 	color: rgb(209, 209, 209);
 	padding-bottom: 1rem;
 	padding-top: 3rem;
@@ -354,21 +354,95 @@ a.active, a:hover {
 
 .sessao-artigos {
 	padding-top: 5%;
-	padding-bottom: 4%;
-	background-color: #00a336;
+	background-color:#242847;
 
 }
 
 .section-header2 h1 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 3rem;
-    background-color: #00a336;
+    background-color: #242847;
 	padding-bottom: 1rem;
 	padding-top: 3rem;
 	color: #fff;
 	text-align: center;
 	margin: auto;
 	
+}
+
+.card-post{
+	margin-left: 7%;
+	margin-right: 7%;
+	
+}
+
+.backg{
+	background-color: rgb(26, 25, 25);
+}
+
+.post-img-top {
+    width: 86%;
+	height: 500px;
+	object-fit: cover;
+    margin-left: 7%;
+    margin-right: 8%;
+	margin-top: 4%;
+}
+
+.spaces{
+	padding: 2%;
+	display: inherit;
+}
+
+.bi-bi-trash:hover{
+	color: #ff0000;
+	transition: .5s;
+}
+
+.bi-bi-pencil-square{
+	color: #fff;
+}
+
+.bi-bi-pencil-square:hover{
+	color: #00c0c7;
+	transition: .5s;
+}
+
+.edit-back {
+	background-color: transparent;
+
+}
+
+.edit-back label {
+	padding: 2%;
+	background-color: #242847;
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	border-radius: 5px;
+}
+
+.edit-back textarea{
+	background-color: black;
+	border-radius: 5px;
+}
+
+
+.bi-bi-trash {
+ float: right;
+ color: rgb(255, 255, 255);
+}
+
+.title-post {
+	padding: 2%;
+    background-color: rgba(26,25,25);
+	text-align: center;
+}
+
+.text-author{
+	color: rgb(83, 82, 82);
+	font-size: 1.7rem;
 }
 
 .artigos-header i{
@@ -383,7 +457,7 @@ a.active, a:hover {
 }
 
 .espaço-artigos {
-	background-color: #00a336;
+	background-color: #242847;
 	padding: 4%;
 	padding-bottom: 4%;
 	position: flex;
@@ -394,11 +468,11 @@ a.active, a:hover {
 	justify-content: space-evenly;
 	display: flex;
 	flex-direction: row;	
-	background-color: #00a336;
+	background-color: #242847;
 }
 
 .espaço-artigos body {
-	background-color: #00a336;
+	background-color: #242847;
 }
 
 /*_______Artigos_Mobile__________*/
@@ -413,10 +487,10 @@ a.active, a:hover {
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
-		background-color: #00a336;
+		background-color: #242847;
 	}
 	.espaço-artigos {
-		background-color: #00a336;
+		background-color: #242847;
 		padding: 3%;
 		min-height: 100%;
 		display: flex;
@@ -440,7 +514,7 @@ a.active, a:hover {
 }
 
 .art h1{
-	background: #363636;
+	background: #d1d1d1;
 	border-radius: 10px;
 	/*margin: 2%;*/
 }
@@ -448,10 +522,10 @@ a.active, a:hover {
 
 
 .art h2 h3 h5 h6 {
-	color: #d6d6d6;
+	color: #ffffff;
 	padding-left: 2%; 
 	padding-top: 2%; 
-	background: #363636;
+	background: #dbdbdb;
 }
 
 .art h3 {
@@ -507,7 +581,7 @@ a.active, a:hover {
 /*___________Post_de_Artigos______________*/
 
 .posta {
-	background-color: #00a336; 
+	background-color: #242847; 
 	text-align: center;
 	padding: 2%;
 }
@@ -541,7 +615,7 @@ a.active, a:hover {
 	font-size: 3rem;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	margin-bottom: 4rem;
-	border-bottom: 2px solid #00a336;
+	border-bottom: 2px solid #242847;
 }
 
 .pergunta-header {
@@ -574,7 +648,7 @@ a.active, a:hover {
 	padding: 1.5%;
     padding-right: 20rem;
 	font-size: 1rem;
-	border: 1px solid #00a336;
+	border: 1px solid #242847;
 	border-radius: 50px;
 	color: #fff;
 	background-color:rgb(42, 42, 42);
@@ -590,15 +664,15 @@ a.active, a:hover {
 	padding: 1.5%;
 	margin-top: 13px;
 	border-radius: 50px;
-	background-color: #00a336;
+	background-color: #242847;
 	text-align: center;
 }
 
 .resposta{
 	padding: 5%;
 	padding-bottom: 2%;
-	border-left: 7px solid #00a336;
-	border-bottom: 5px solid #00a336;
+	border-left: 7px solid #242847;
+	border-bottom: 5px solid #242847;
 }
 
 .resposta-titulo {
@@ -622,7 +696,7 @@ a.active, a:hover {
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
-	border: 2px solid #00a336;
+	border: 2px solid #242847;
 	
 }
 
@@ -657,7 +731,7 @@ a.active, a:hover {
 		margin-bottom: 4rem;
 		margin-left: 42%;
 		margin-right: 42%;
-		border-bottom: 2px solid #00a336;
+		border-bottom: 2px solid #242847;
 	}
 	
 	.pergunta-header {
@@ -688,7 +762,7 @@ a.active, a:hover {
 	.resposta-btn {
 		padding: 1%;
 		padding-bottom: 5px;
-		border: 1px solid #00a336;
+		border: 1px solid #242847;
 		border-radius: 50px;
 		color: #fff;
 		background-color:rgb(42, 42, 42);
@@ -704,7 +778,7 @@ a.active, a:hover {
 		padding: 1.5%;
 		margin-top: 7.5px;
 		border-radius: 50px;
-		background-color: #00a336;
+		background-color: #242847;
 		text-align: center;
 	}
 	
@@ -714,8 +788,8 @@ a.active, a:hover {
 		flex-direction: column;
 		padding: 5%;
 		padding-bottom: 0;
-		border-left: 7px solid #00a336;
-		border-bottom: 5px solid #00a336;
+		border-left: 7px solid #242847;
+		border-bottom: 5px solid #242847;
 	}
 	
 	.resposta-titulo {
@@ -738,7 +812,7 @@ a.active, a:hover {
 		width: 50px;
 		height: 50px;
 		border-radius: 50%;
-		border: 2px solid #00a336;
+		border: 2px solid #242847;
 		
 	}
 	
@@ -765,7 +839,7 @@ a.active, a:hover {
 	margin-bottom: 4rem;
 	margin-left: 42%;
 	margin-right: 42%;
-	border-bottom: 2px solid #00a336;
+	border-bottom: 2px solid #242847;
 }
 
 .forum-header-fi{
@@ -779,7 +853,7 @@ a.active, a:hover {
 	margin-bottom: 4rem;
 	margin-left: 30%;
 	margin-right: 30%;
-	border-bottom: 2px solid #00a336;
+	border-bottom: 2px solid #242847;
 }
 
 .pergunta-forum{
@@ -817,7 +891,7 @@ a.active, a:hover {
 }
 
 .pergunta-txt-forum h3{
-	background-color: #363636;
+	background-color: #fafafa;
 	padding-left: 2%;
 }
 
@@ -834,7 +908,7 @@ a.active, a:hover {
 
 .resposta-btn-forum {
 	padding: 4%;
-	border: 1px solid #00a336;
+	border: 1px solid #242847;
 	border-radius: 50px;
 	color: #fff;
 	background-color:rgb(42, 42, 42);
@@ -851,7 +925,7 @@ a.active, a:hover {
 	color: #fff;
 	padding: 1.5%;
 	border-radius: 50px;
-	background-color: #00a336;
+	background-color: #242847;
 }
 
 .resposta-forum{
@@ -862,8 +936,8 @@ a.active, a:hover {
 	flex-direction: column;
 	padding: 5%;
 	padding-bottom: 5%;
-	border-left: 7px solid #00a336;
-	border-bottom: 5px solid #00a336;
+	border-left: 7px solid #242847;
+	border-bottom: 5px solid #242847;
 }
 
 @media (max-width: 1030px) {
@@ -875,8 +949,8 @@ a.active, a:hover {
 		flex-direction: column;
 		padding: 5%;
 		padding-bottom: 10%;
-		border-left: 7px solid #00a336;
-		border-bottom: 5px solid #00a336;
+		border-left: 7px solid #242847;
+		border-bottom: 5px solid #242847;
 	}
 	
 }
@@ -903,7 +977,7 @@ a.active, a:hover {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	border: 2px solid #00a336;
+	border: 2px solid #242847;
 	
 }
 
@@ -960,7 +1034,7 @@ a.active, a:hover {
 	padding: 1.5%;
 	margin-top: 13px;
 	border-radius: 50px;
-	background-color: #00a336;
+	background-color: #242847;
 	padding-top: 0.4rem;
 	padding-left: 0.75rem;
 }
@@ -1022,7 +1096,7 @@ a.active, a:hover {
 	width: 17%;
 	height: 17%;
 	padding: 0%;
-	border: 2px solid #00501b;
+	border: 2px solid  #242847;
 	border-radius: 50%;
 }
 
@@ -1073,8 +1147,8 @@ a.active, a:hover {
 	font-size: 115%;
 	padding-top: 1%;
 	padding-bottom: 1%;
-	border-top: 2px solid #00501b;
-	border-bottom: 2px solid #00501b;
+	border-top: 2px solid  #242847;
+	border-bottom: 2px solid  #242847;
 	border-radius: 0%;
 }
 /* ________Biografia-Mobile__________ */
@@ -1097,7 +1171,7 @@ a.active, a:hover {
 		width: 50%;
 		height: 50%;
 		padding: 0%;
-		border: 2px solid #00501b;
+		border: 2px solid  #242847;
 		border-radius: 50%;
 		margin-left: 25%;
 	}
@@ -1150,8 +1224,8 @@ a.active, a:hover {
 		font-size: 140%;
 		padding-top: 1%;
 		padding-bottom: 1%;
-		border-top: 2px solid #00501b;
-		border-bottom: 2px solid #00501b;
+		border-top: 2px solid  #242847;
+		border-bottom: 2px solid  #242847;
 	}
 }
 
@@ -1254,7 +1328,7 @@ a.active, a:hover {
 .user-artigos-header h2 {
 	padding-top: 1%;
 	padding-bottom: 1%;
-	border-bottom: 3px solid #00501b;
+	border-bottom: 3px solid  #242847;
 	width: 40%;
 	margin-left: 30%;
 }
@@ -1287,11 +1361,11 @@ a.active, a:hover {
 	height: auto;
 	width: 100%;
 	text-align: center;
-	background-color: #00a336;
+	background-color: #242847;
 }
 
 .user-perguntas-header h2 {
-	background-color: #00a336;
+	background-color: #242847;
 	padding-top: 1%;
 	padding-bottom: 1%;
 }
@@ -1355,7 +1429,7 @@ a.active, a:hover {
 }
 
 .resposta-btn {
-	border: 1px solid #00a336;
+	border: 1px solid #242847;
 	border-radius: 50px;
 	color: #fff;
 	background-color:rgb(42, 42, 42);
@@ -1374,7 +1448,7 @@ a.active, a:hover {
 
 .resposta-btn-txt {
 	padding: 2%;
-	border: 1px solid #00a336;
+	border: 1px solid #242847;
 	border-radius: 50px;
 	color: #fff;
 	background-color:rgb(42, 42, 42);
@@ -1400,8 +1474,8 @@ textarea {
     line-height: 1.5;
 	border-radius: 30px;
 	color: #fff;
-    border: 1px solid #00a336;
-	box-shadow: 1px 1px 1px #00a336;
+    border: 1px solid #242847;
+	box-shadow: 1px 1px 1px #242847;
 	background-color: rgb(42, 42, 42);
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -1426,7 +1500,7 @@ label {
 
 /*____footer_____*/
 .footer {
-	background: #00a336;
+	background: #242847;
 	height: 4rem; 	
 	width: 100%;
 	text-align: center;
@@ -1494,8 +1568,8 @@ input[type="file"] {
 
 .custom-file-upload {
 	font-size: 1.5rem;
-	border: 1px solid #00a336;
-	background-color: #00a336;
+	border: 1px solid #242847;
+	background-color: #242847;
 	border-radius: 10pc;
     display: inline-block;
 	padding: 5px 12px;
@@ -1529,5 +1603,5 @@ input[type="file"] {
 
 
 .btn-botstrap {
-	background-color: #00a336;
+	background-color: #242847;
 }

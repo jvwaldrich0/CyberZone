@@ -51,7 +51,7 @@ input {
 .banana h1  {
   color: #fff;
   text-align: center;
-  border-bottom: 2px solid #00a336;
+  border-bottom: 2px solid #464f91;
   padding-bottom: 2%;
 }
 
@@ -105,7 +105,7 @@ form.sign-in-form {
 
 .title {
   font-size: 2.2rem;
-  color: #00a336;
+  color: #464f91;
   margin-bottom: 10px;
 }
 
@@ -200,7 +200,7 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background-color: #00a336;
+  background-color: #464f91;
   border: none;
   outline: none;
   height: 49px;
@@ -214,7 +214,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #00521b;
+  background-color: #7700ff;
 }
 .panels-container {
   position: absolute;
@@ -234,7 +234,7 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #00a336 0%, #006321 80%);
+  background-image: linear-gradient(-45deg, #242847 0%, #464f91 80%);
   transition: 1.8s ease-in-out;
   z-index: 6;
 }
