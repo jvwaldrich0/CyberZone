@@ -46,11 +46,11 @@
       alt="Card image cap"
     />
     <div style="
-      height:400px;
+      height:600px;
       padding: 5%;
-      {% if user.id == post.author.id %}background-color: #3b3a50;{% else %}background-color: #1c1b29;{% endif %}class="card-body">
+      {% if user.id == post.author.id %}background-color: #3b3a50;{% else %}background-color: #1c1b29;{% endif %}"class="card-body">
       <h4 style="color: #fff; background: transparent" class="card-title">{{post.title}}</h4>
-      <p style="color: grey; background: transparent" class="card-text">{{post.summary}}</p>
+      <p style="color: grey; background: transparent;" class="card-text">{{post.summary}}</p>
     </div>
     </div>
   </a>
