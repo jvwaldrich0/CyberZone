@@ -14,7 +14,7 @@ class post(models.Model):
         ('publicado','Publicado'),
     )
     background = models.ImageField()
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=100)
     summary = models.CharField(max_length=400)
     content = RichTextUploadingField()
     author = models.ForeignKey(User, on_delete=models.PROTECT)
