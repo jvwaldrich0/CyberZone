@@ -1,10 +1,31 @@
+<h1 align="center">
+    <img alt="Cyberzone" title="#Cyberzone" src="./docs/logodesign.gif" /> Cyberzone
+</h1>
+
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/tgmarinho/nlw1?color=%2304D361">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/tgmarinho/nlw1">
+  
+  <a href="https://github.com/tgmarinho/nlw1/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/tgmarinho/nlw1">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+   <a href="https://github.com/tgmarinho/nlw1/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/tgmarinho/nlw1?style=social">
+  </a>
+</p>
 
 
-# ![alt text](./docs/logodesign.gif) <h1 style="align=center">**Cyberzone**</h1>
 
-## <span style="color:lightblue">Bem vindo ao mundo </span><span style="color:#9163b6">**Cyberzone**</span>. ![alt text](./public/static/img/favicon-32x32.png) 
-#### *Devido a demanda por sites de TI estar aumentando nos últimos anos, Cyberzone é uma iniciativa de João Vitor Waldrich, Maria Vitória Machado e Vitor Ehrig junto ao programa Entra21 de desenvolver um site com a missão de levar a esta demanda uma aplicação com uma interface simples e intuitiva de utilizar, uma aplicação cujo o objetivo é atrair o público que deseja aprender ou ensinar mais sobre a área de informática.*
+## <span style="color:lightblue">Bem vindo ao mundo </span><span style="color:#9163b6">**Cyberzone**</span>.
+<br>
 
+#### Devido a demanda por sites de TI estar aumentando nos últimos anos, Cyberzone é uma iniciativa de João Vitor Waldrich, Maria Vitória Machado e Vitor Ehrig junto ao programa Entra21 de desenvolver um site com a missão de levar a esta demanda uma aplicação com uma interface simples e intuitiva de utilizar, uma aplicação cujo o objetivo é atrair o público que deseja aprender ou ensinar mais sobre a área de informática.
+
+
+<br>
 
 ## <span style="color:lightblue">Deseja dar uma olhada na nossa tela inicial?</span>
 
@@ -28,11 +49,19 @@
 
 ---
 
+<br>
+
 ### **Utilizamos o framework Django, o site atualmente suporta a modificação de perfil e criação de artigos como base de seu escopo, mas nada impede de haver atualizações em seu futuro.**
 
 
+<br>
+
+<br>
+
 
 # <span style="color:lightcyan">**Instalação**</span>
+
+<br>
 
 ## **Automática**
 
