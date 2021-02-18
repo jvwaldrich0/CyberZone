@@ -20,6 +20,15 @@
 
 
 ## <span style="color:lightblue">Bem vindo ao mundo </span><span style="color:#9163b6">**Cyberzone**</span>.
+<br>
+
+#### Devido a demanda por sites de TI estar aumentando nos últimos anos, Cyberzone é uma iniciativa de João Vitor Waldrich, Maria Vitória Machado e Vitor Ehrig junto ao programa Entra21 de desenvolver um site com a missão de levar a esta demanda uma aplicação com uma interface simples e intuitiva de utilizar, uma aplicação cujo o objetivo é atrair o público que deseja aprender ou ensinar mais sobre a área de informática.
+
+
+<br>
+
+
+## <span style="color:lightblue">Bem vindo ao mundo </span><span style="color:#9163b6">**Cyberzone**</span>.
 
 #### Devido a demanda por sites de TI estar aumentando nos últimos anos, Cyberzone é uma iniciativa de João Vitor Waldrich, Maria Vitória Machado e Vitor Ehrig junto ao programa Entra21 de desenvolver um site com a missão de levar a esta demanda uma aplicação com uma interface simples e intuitiva de utilizar, uma aplicação cujo o objetivo é atrair o público que deseja aprender ou ensinar mais sobre a área de informática.
 
