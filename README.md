@@ -30,8 +30,6 @@
 
 ### **Utilizamos o framework Django, o site atualmente suporta a modificação de perfil e criação de artigos como base de seu escopo, mas nada impede de haver atualizações em seu futuro.**
 
----
-
 
 
 # <span style="color:lightcyan">**Instalação**</span>
