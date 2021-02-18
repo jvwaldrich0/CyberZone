@@ -38,8 +38,6 @@
 
 -> Execute o script `main.py` que esta na pagina principal
 
----
-
 ## **Manual**
 
 - #### Windows
