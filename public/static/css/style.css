@@ -376,6 +376,11 @@ a.active, a:hover {
 	
 }
 
+.card-post h1, h2, h3, h4{
+	color: white;
+}
+
+
 .backg{
 	background-color: rgb(26, 25, 25);
 }

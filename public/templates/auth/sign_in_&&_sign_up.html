@@ -9,7 +9,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/../static/login.css" />
-    <title>Sign in & Sign up</title>
+    <title>Account</title>
   </head>
   <body style="background-color: rgb(17, 17, 17); width: 100%">
     {% if user.is_authenticated %}
@@ -34,7 +34,7 @@
         <div class="signin-signup">
           <form class="sign-in-form" method="post" action="">
             {% csrf_token %}
-            <h2 class="title">Sign in</h2>
+            <h2 class="title">Login</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
               {{login_form.username}}
@@ -75,7 +75,7 @@
               {{register_form.password2}}
             </div>
             <button type="submit" value="Login" class="btn solid">
-              Submit
+              Me cadastre
             </button>
             {% for message in messages %}
                 <div style="color:red;"class="alert alert-danger" role="alert">
@@ -91,8 +91,7 @@
           <div class="content">
             <h3>Novo aqui ?</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
+              Venha se juntar a comunidade Cyberzone, estamos esperando ansiosamente por você aqui ! #EquipeCyberzone
             </p>
             <button class="btn transparent" id="sign-up-btn">Sign up</button>
           </div>
@@ -101,8 +100,7 @@
           <div class="content">
             <h3>Deseja Fazer Login ?</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              laboriosam ad deleniti.
+              Se você já possui uma conta, venha fazer login para continuar nossa jornada de espalhar conhecimento ao redor do mundo
             </p>
             <button class="btn transparent" id="sign-in-btn">Sign in</button>
           </div>
