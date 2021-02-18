@@ -36,7 +36,7 @@
 
 ## **Automática**
 
--> Execute o script `main.py` que esta na pagina principal
+-> Execute o script `main.py` que esta na na pasta raiz do projeto
 
 ## **Manual**
 
