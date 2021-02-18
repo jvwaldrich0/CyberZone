@@ -1,6 +1,8 @@
 
-# <span style="color:lightcyan">**Cyberzone**</span>
 
+# ![alt text](./docs/logodesign.gif) 
+
+# <span style="align=center; color:lightcyan">**Cyberzone**</span>
 
 
 ## <span style="color:lightblue">Bem vindo ao mundo </span><span style="color:#9163b6">**Cyberzone**</span>. ![alt text](./public/static/img/favicon-32x32.png) 
